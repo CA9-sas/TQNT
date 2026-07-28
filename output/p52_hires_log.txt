@@ -1,0 +1,40 @@
+etalonnage 3_1 (N=400) : RL = 32.837 ; |Wr| = 3.4243 ; ideal 3,4144
+  -> facteur d'etalonnage du writhe : 0.99712 (biais +0.29 %)
+depart 5_2 (N=400) : RL = 53.136 ; Wr = 4.4192
+  231.1s  sono1        RL = 52.961  Wr = 4.4401  (etalonne 4.4273)
+  325.8s  sono2        RL = 52.507  Wr = 4.4649  (etalonne 4.4520)
+
+=== BILAN N=400 (326 s, 2 tours) ===
+RL(5_2) = 52.507 ; ratio l(5_2)/l(3_1) = 1.5990 (canon 1,596)
+Wr brut = 4.4649 ; Wr ETALONNE = 4.4520  (prediction 1/pi : 4,5381 +- 0,0072)
+dWr_etalonne/pi = 0.3303  vs  s = 0.3577 +- 0.0023  (+8.3 %, 11.9 sigma)
+etalonnage 3_1 (N=400) : RL = 32.837 ; |Wr| = 3.4243 ; ideal 3,4144
+  -> facteur d'etalonnage du writhe : 0.99712 (biais +0.29 %)
+depart 5_2 (N=400) : RL = 52.507 ; Wr = 4.4649
+  235.9s  sono1        RL = 52.058  Wr = 4.4837  (etalonne 4.4708)
+  324.7s  sono2        RL = 51.647  Wr = 4.4994  (etalonne 4.4864)
+  398.7s  sono3        RL = 51.526  Wr = 4.4974  (etalonne 4.4844)
+  699.6s  recuit4      RL = 51.297  Wr = 4.5126  (etalonne 4.4995)
+  774.3s  sono5        RL = 51.159  Wr = 4.5115  (etalonne 4.4985)
+  854.0s  sono6        RL = 51.136  Wr = 4.5103  (etalonne 4.4973)
+  935.0s  sono7        RL = 51.121  Wr = 4.5093  (etalonne 4.4963)
+ 1233.8s  recuit8      RL = 51.113  Wr = 4.5092  (etalonne 4.4962)
+ 1312.0s  sono9        RL = 51.082  Wr = 4.5090  (etalonne 4.4960)
+ 1387.6s  sono10       RL = 51.071  Wr = 4.5085  (etalonne 4.4955)
+ 1464.1s  sono11       RL = 51.056  Wr = 4.5081  (etalonne 4.4951)
+ 1758.4s  recuit12     RL = 51.043  Wr = 4.5071  (etalonne 4.4941)
+ 1837.4s  sono13       RL = 51.037  Wr = 4.5069  (etalonne 4.4939)
+ 1912.7s  sono14       RL = 51.027  Wr = 4.5062  (etalonne 4.4932)
+ 1988.7s  sono15       RL = 51.022  Wr = 4.5058  (etalonne 4.4928)
+ 2284.7s  recuit16     RL = 51.020  Wr = 4.5056  (etalonne 4.4926)
+ 2364.8s  sono17       RL = 51.014  Wr = 4.5054  (etalonne 4.4924)
+ 2449.1s  sono18       RL = 51.008  Wr = 4.5055  (etalonne 4.4925)
+ 2535.2s  sono19       RL = 51.000  Wr = 4.5056  (etalonne 4.4926)
+ 2835.4s  recuit20     RL = 50.994  Wr = 4.5056  (etalonne 4.4926)
+ 2912.6s  sono21       RL = 50.987  Wr = 4.5055  (etalonne 4.4925)
+plateau persistant -- arret
+
+=== BILAN N=400 (2913 s, 21 tours) ===
+RL(5_2) = 50.987 ; ratio l(5_2)/l(3_1) = 1.5527 (canon 1,596)
+Wr brut = 4.5055 ; Wr ETALONNE = 4.4925  (prediction 1/pi : 4,5381 +- 0,0072)
+dWr_etalonne/pi = 0.3432  vs  s = 0.3577 +- 0.0023  (+4.2 %, 6.3 sigma)

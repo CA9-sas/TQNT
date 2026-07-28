@@ -1,0 +1,90 @@
+    0.0s  depart A : RL = 50.9873 (N=400)
+    0.1s  ** MEILLEUR A0 : RL = 50.9873 (ACPR +3.07 %, 3/2 +3.81 %)
+   33.8s    depart : rho = 51.06
+   67.9s      sweep 0 s=0.35 essai 0 : rho =   53.53 gap = 1.998 OK
+  102.3s      sweep 0 s=0.35 essai 1 : rho =   51.39 gap = 1.998 OK
+  136.1s      sweep 0 s=0.45 essai 0 : rho =   51.49 gap = 1.999 OK
+  170.2s      sweep 0 s=0.45 essai 1 : rho =   51.33 gap = 1.999 OK
+  204.3s      sweep 0 s=0.55 essai 0 : rho =   53.07 gap = 1.997 OK
+  237.9s      sweep 0 s=0.55 essai 1 : rho =   51.61 gap = 1.998 OK
+  272.0s      sweep 0 s=0.65 essai 0 : rho =   51.41 gap = 1.997 OK
+  306.8s      sweep 0 s=0.65 essai 1 : rho =   51.41 gap = 1.998 OK
+  341.7s      sweep 0 s=0.80 essai 0 : rho =   51.44 gap = 1.998 OK
+  376.9s      sweep 0 s=0.80 essai 1 : rho =   51.32 gap = 1.999 OK
+    0.0s  depart A : RL = 50.9873 (N=400)
+    0.1s  ** MEILLEUR A0 : RL = 50.9873 (ACPR +3.07 %, 3/2 +3.81 %)
+   33.6s    depart : rho = 51.06
+   68.7s      sweep 0 s=0.35 essai 0 : rho =   53.53 gap = 1.998 OK
+  102.6s      sweep 0 s=0.35 essai 1 : rho =   51.39 gap = 1.998 OK
+  135.9s      sweep 0 s=0.45 essai 0 : rho =   51.49 gap = 1.999 OK
+  169.5s      sweep 0 s=0.45 essai 1 : rho =   51.33 gap = 1.999 OK
+  204.8s      sweep 0 s=0.55 essai 0 : rho =   53.07 gap = 1.997 OK
+  239.9s      sweep 0 s=0.55 essai 1 : rho =   51.61 gap = 1.998 OK
+  273.7s      sweep 0 s=0.65 essai 0 : rho =   51.41 gap = 1.997 OK
+  309.1s      sweep 0 s=0.65 essai 1 : rho =   51.41 gap = 1.998 OK
+  345.1s      sweep 0 s=0.80 essai 0 : rho =   51.44 gap = 1.998 OK
+  379.9s      sweep 0 s=0.80 essai 1 : rho =   51.32 gap = 1.999 OK
+  380.5s  A.polish1      RL = 50.9505
+  476.8s    depart : rho = 51.07
+  537.1s      sweep 0 s=0.35 essai 0 : rho =   54.46 gap = 1.997 OK
+  597.3s      sweep 0 s=0.35 essai 1 : rho =   51.85 gap = 1.998 OK
+  660.6s      sweep 0 s=0.45 essai 0 : rho =   51.75 gap = 1.998 OK
+  720.7s      sweep 0 s=0.45 essai 1 : rho =   52.64 gap = 1.998 OK
+  781.9s      sweep 0 s=0.55 essai 0 : rho =   52.66 gap = 1.997 OK
+  844.9s      sweep 0 s=0.55 essai 1 : rho =   51.59 gap = 1.999 OK
+  908.9s      sweep 0 s=0.65 essai 0 : rho =   51.52 gap = 1.999 OK
+  972.5s      sweep 0 s=0.65 essai 1 : rho =   51.42 gap = 1.999 OK
+ 1035.6s      sweep 0 s=0.80 essai 0 : rho =   51.13 gap = 1.998 OK
+ 1096.5s      sweep 0 s=0.80 essai 1 : rho =   51.18 gap = 1.997 OK
+ 1097.4s  A.polish2      RL = 50.9798
+ 1154.4s    depart : rho = 51.06
+ 1173.1s      sweep 0 s=0.35 essai 0 : rho =   51.18 gap = 1.998 OK
+ 1192.6s      sweep 0 s=0.35 essai 1 : rho =   52.30 gap = 1.999 OK
+ 1213.1s      sweep 0 s=0.45 essai 0 : rho =   51.18 gap = 1.999 OK
+ 1234.9s      sweep 0 s=0.45 essai 1 : rho =   53.04 gap = 1.998 OK
+ 1255.9s      sweep 0 s=0.55 essai 0 : rho =   53.86 gap = 1.996 OK
+ 1275.9s      sweep 0 s=0.55 essai 1 : rho =   51.15 gap = 1.997 OK
+ 1295.0s      sweep 0 s=0.65 essai 0 : rho =   53.25 gap = 1.998 OK
+ 1316.0s      sweep 0 s=0.65 essai 1 : rho =   51.30 gap = 1.998 OK
+ 1336.8s      sweep 0 s=0.80 essai 0 : rho =   51.61 gap = 1.998 OK
+ 1357.3s      sweep 0 s=0.80 essai 1 : rho =   52.32 gap = 1.998 OK
+ 1357.8s  A.polish3      RL = 50.9505
+ 1453.8s    depart : rho = 51.07
+ 1511.1s      sweep 0 s=0.35 essai 0 : rho =   52.24 gap = 1.998 OK
+ 1572.4s      sweep 0 s=0.35 essai 1 : rho =   51.88 gap = 1.999 OK
+ 1635.9s      sweep 0 s=0.45 essai 0 : rho =   51.67 gap = 1.997 OK
+ 1699.5s      sweep 0 s=0.45 essai 1 : rho =   51.66 gap = 1.998 OK
+ 1763.1s      sweep 0 s=0.55 essai 0 : rho =   53.38 gap = 1.998 OK
+ 1824.5s      sweep 0 s=0.55 essai 1 : rho =   52.76 gap = 1.996 OK
+ 1886.8s      sweep 0 s=0.65 essai 0 : rho =   51.41 gap = 1.999 OK
+ 1943.5s      sweep 0 s=0.65 essai 1 : rho =   51.50 gap = 2.000 OK
+ 1998.3s      sweep 0 s=0.80 essai 0 : rho =   51.27 gap = 1.998 OK
+ 2054.4s      sweep 0 s=0.80 essai 1 : rho =   51.96 gap = 1.997 OK
+ 2055.3s  A.polish4      RL = 50.9798
+    0.0s  depart A : RL = 50.9873 (N=400)
+    0.1s  ** MEILLEUR A0 : RL = 50.9873 (ACPR +3.07 %, 3/2 +3.81 %)
+   34.1s    depart : rho = 51.06
+   67.2s      sweep 0 s=0.35 essai 0 : rho =   53.53 gap = 1.998 OK
+  103.2s      sweep 0 s=0.35 essai 1 : rho =   51.39 gap = 1.998 OK
+  137.5s      sweep 0 s=0.45 essai 0 : rho =   51.49 gap = 1.999 OK
+  173.6s      sweep 0 s=0.45 essai 1 : rho =   51.33 gap = 1.999 OK
+  208.7s      sweep 0 s=0.55 essai 0 : rho =   53.07 gap = 1.997 OK
+  242.3s      sweep 0 s=0.55 essai 1 : rho =   51.61 gap = 1.998 OK
+  276.0s      sweep 0 s=0.65 essai 0 : rho =   51.41 gap = 1.997 OK
+  309.1s      sweep 0 s=0.65 essai 1 : rho =   51.41 gap = 1.998 OK
+  341.0s      sweep 0 s=0.80 essai 0 : rho =   51.44 gap = 1.998 OK
+  373.7s      sweep 0 s=0.80 essai 1 : rho =   51.32 gap = 1.999 OK
+  374.5s  A.polish1      RL = 50.9505
+  415.0s  depart B : RL brut = 90.3
+  560.9s    depart : rho = 68.50
+  607.8s      sweep 0 s=0.40 essai 0 : rho =   62.19 gap = 1.999 OK
+  607.8s        -> nouveau meilleur : 62.19
+  655.6s      sweep 0 s=0.40 essai 1 : rho =   62.62 gap = 1.999 OK
+  701.4s      sweep 0 s=0.55 essai 0 : rho =   62.51 gap = 1.999 OK
+  748.3s      sweep 0 s=0.55 essai 1 : rho =   61.00 gap = 1.999 OK
+  748.3s        -> nouveau meilleur : 61.00
+  795.2s      sweep 0 s=0.70 essai 0 : rho =   60.64 gap = 1.998 OK
+  795.2s        -> nouveau meilleur : 60.64
+  842.3s      sweep 0 s=0.70 essai 1 : rho =   61.10 gap = 1.999 OK
+  873.2s  B.polish       RL = 58.1525
+ 1033.1s  3_1 meme protocole : RL = 32.8371 (ACPR +0.28 %)
