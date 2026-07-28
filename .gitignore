@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.toc
+*.maf
+*.mtc*
+.pytest_cache/
+# Jamais de données télescope ni d'archives lourdes
+*.fits
+*.tar
+docs/references/

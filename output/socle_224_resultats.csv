@@ -1,0 +1,227 @@
+etat,m_exp_GeV,J,m_socle_GeV,methode,J_lu,fraction_socle
+gamma,0.0,1.0,0.0,catalogue/zero,,0
+nu,0.0,0.5,0.0,catalogue/zero,,0
+e-,0.00051,0.5,0.00051,catalogue/koide,,4.177e-23
+mu-,0.10565999999999999,0.5,0.10566,catalogue/koide,,8.654e-21
+tau-,1.7768599999999999,0.5,1.7769,catalogue/koide,,1.455e-19
+pi0,0.135,0.0,0.135,catalogue/GMOR,,1.106e-20
+pi+,0.13957,0.0,0.1396,catalogue/GMOR,,1.143e-20
+K+,0.49368,0.0,0.4937,catalogue/GMOR,,4.044e-20
+K0,0.49761,0.0,0.4976,catalogue/GMOR,,4.076e-20
+eta,0.54786,0.0,0.567,catalogue/GMO,,4.487e-20
+eta',0.95778,0.0,0.958,catalogue/anomalie_U1A,,7.845e-20
+rho,0.77526,1.0,0.755,catalogue/Regge(a0=0.48),,6.350e-20
+omega,0.78265,1.0,0.755,catalogue/Regge(a0=0.48),,6.410e-20
+phi,1.01946,1.0,1.0195,catalogue/Regge+etrange,,8.350e-20
+D+,1.86966,0.0,1.867,catalogue/constituant,,1.531e-19
+D0,1.8648399999999998,0.0,1.867,catalogue/constituant,,1.527e-19
+Ds+,1.96834,0.0,1.9594,catalogue/constituant+demi-subst,,1.612e-19
+J/psi,3.0969,1.0,3.114,catalogue/Cornell/const,,2.537e-19
+Ups,9.4603,1.0,9.8,catalogue/Cornell/const,,7.749e-19
+B+,5.27934,0.0,5.262,catalogue/constituant,,4.324e-19
+B0,5.27966,0.0,5.262,catalogue/constituant,,4.324e-19
+Bs0,5.36692,0.0,5.3544,catalogue/constituant+demi-subst,,4.396e-19
+p,0.9382699999999999,0.5,0.9382,catalogue/octet,,7.685e-20
+n,0.93957,0.5,0.9382,catalogue/octet,,7.696e-20
+Lambda,1.11568,0.5,1.1147,catalogue/Regge+Delta_s,,9.138e-20
+Sigma+,1.1893699999999998,0.5,1.1928,catalogue/Regge+Delta_s+tau_perp,,9.742e-20
+Sigma-,1.1974500000000001,0.5,1.1928,catalogue/Regge+Delta_s+tau_perp,,9.808e-20
+Xi0,1.31486,0.5,1.3398,catalogue/Regge+Delta_s+tau_perp,,1.077e-19
+Xi-,1.32171,0.5,1.3398,catalogue/Regge+Delta_s+tau_perp,,1.083e-19
+Delta,1.232,1.5,1.2321,catalogue/decuplet,,1.009e-19
+Omega-,1.67245,1.5,1.6731,catalogue/Regge+Delta_s+tau_perp,,1.370e-19
+Lambda_c,2.28646,0.5,2.2999,catalogue/constituant+torsion(n=1),,1.873e-19
+Lambda_b,5.6196,0.5,5.6212,catalogue/constituant+torsion(n=1),,4.603e-19
+W,80.377,1.0,80.68,catalogue/EW_VEV,,6.583e-18
+Z,91.188,1.0,90.56,catalogue/EW_VEV,,7.469e-18
+H,125.25,0.0,125.26,catalogue/EW_VEV,,1.026e-17
+top,172.69,0.5,170.41,catalogue/EW_VEV,,1.414e-17
+nu_mu,0,0.5,0.0,zero,,0
+nu_tau,0,0.5,0.0,zero,,0
+gluon(res.),0,1,0.0,zero,,0
+a2(1320),1.3182,2,1.30435,Regge[rho/a],2.033,1.080e-19
+rho3(1690),1.6888,3,1.6738,Regge[rho/a],3.046,1.383e-19
+a4(1970),1.967,4,1.97532,Regge[rho/a],3.97,1.611e-19
+rho5(2350),2.33,5,2.23656,Regge[rho/a],5.388,1.908e-19
+a6(2450),2.45,6,2.47032,Regge[rho/a],5.909,2.007e-19
+f2(1270),1.2754,2,1.30876,Regge[omega/f],1.922,1.045e-19
+omega3(1670),1.667,3,1.67724,Regge[omega/f],2.969,1.365e-19
+f4(2050),2.018,4,1.97824,Regge[omega/f],4.144,1.653e-19
+f6(2510),2.465,6,2.47266,Regge[omega/f],5.966,2.019e-19
+K2*(1430),1.4273,2,1.37924,Regge[K*],2.123,1.169e-19
+K3*(1780),1.779,3,1.7328,Regge[K*],3.147,1.457e-19
+K4*(2045),2.045,4,2.02556,Regge[K*],4.072,1.675e-19
+K5*(2380),2.382,5,2.28105,Regge[K*],5.428,1.951e-19
+f2'(1525),1.5174,2,1.46273,Regge[phi/f'],2.148,1.243e-19
+phi3(1850),1.854,3,1.79997,Regge[phi/f'],3.179,1.519e-19
+pi2(1670),1.6706,2,1.61616,Regge[b/pi2],2.163,1.368e-19
+b3(2030),2.03,3,1.92672,Regge[b/pi2],3.371,1.663e-19
+pi4(2250),2.25,4,2.19375,Regge[b/pi2],4.227,1.843e-19
+a3(1875)?f,1.875,3,1.92704,Regge[a1/f2u],2.82,1.536e-19
+N(1680)5/2,1.685,2.5,1.75591,Regge[N],2.278,1.380e-19
+N(2220)9/2,2.22,4.5,2.29866,Regge[N],4.177,1.818e-19
+N(2700)13/2,2.7,6.5,2.73576,Regge[N],6.323,2.212e-19
+Dl(1950)7/2,1.95,3.5,1.92832,Regge[Delta],3.576,1.597e-19
+Dl(2420)11/2,2.42,5.5,2.4329,Regge[Delta],5.443,1.982e-19
+Dl(2950)15/2,2.95,7.5,2.84949,Regge[Delta],8.03,2.416e-19
+Lm(1820)5/2,1.82,2.5,1.85616,Regge[Lambda],2.379,1.491e-19
+Lm(2350)9/2,2.35,4.5,2.37611,Regge[Lambda],4.388,1.925e-19
+Sg(1915)5/2,1.9155,2.5,1.90136,Regge[Sigma],2.549,1.569e-19
+Sg(2455)9/2?,2.455,4.5,2.41159,Regge[Sigma],4.692,2.011e-19
+Xi(1950)5/2?,1.95,2.5,1.98228,Regge[Xi],2.385,1.597e-19
+Om(2250)?,2.252,3.5,2.23555,Regge[Omega-],3.567,1.845e-19
+Sg(2030)7/2,2.03,3.5,2.0286,Regge[Sigma*],3.505,1.663e-19
+pi(1300),1.3,0,1.24011,radial[pi],,1.065e-19
+pi(1800),1.81,0,1.74822,radial[pi],,1.483e-19
+K(1460),1.482,0,1.32745,radial[K],,1.214e-19
+eta(1295),1.294,0,1.34854,radial[eta],,1.060e-19
+eta(1760),1.751,0,1.82673,radial[eta],,1.434e-19
+rho(1450),1.465,1,1.45583,radial[rho],,1.200e-19
+omega(1420),1.41,1,1.45978,radial[omega],,1.155e-19
+phi(1680),1.68,1,1.59928,radial[phi],,1.376e-19
+K*(1410),1.414,1,1.52329,radial[K*],,1.158e-19
+rho(1700)1D,1.72,1,1.6738,orbital[rho],,1.409e-19
+omega(1650)1D,1.67,1,1.67724,orbital[omega],,1.368e-19
+K*(1680)1D,1.718,1,1.7328,orbital[K*],,1.407e-19
+N(1440)Roper,1.44,0.5,1.54953,radial[N],,1.179e-19
+eta(1475),1.475,0,1.56069,radial[eta'],,1.208e-19
+N(1520)3/2-,1.515,1.5,1.40817,orbital[N],,1.241e-19
+N(1535)1/2-,1.53,0.5,1.40817,orbital[N],,1.253e-19
+N(1650)1/2-,1.65,0.5,1.40817,orbital[N],,1.351e-19
+N(1675)5/2-,1.675,2.5,1.40817,orbital[N],,1.372e-19
+N(1700)3/2-,1.72,1.5,1.40817,orbital[N],,1.409e-19
+N(1710)1/2+,1.71,0.5,1.75591,orbital[N],,1.401e-19
+N(1720)3/2+,1.72,1.5,1.75591,orbital[N],,1.409e-19
+N(1875)3/2-,1.875,1.5,1.87119,orbital[N],,1.536e-19
+N(1900)3/2+,1.92,1.5,1.75591,orbital[N],,1.573e-19
+N(2190)7/2-,2.18,3.5,2.04537,orbital[N],,1.786e-19
+Dl(1600)3/2+,1.57,1.5,1.61806,orbital[Delta],,1.286e-19
+Dl(1620)1/2-,1.61,0.5,1.61806,orbital[Delta],,1.319e-19
+Dl(1700)3/2-,1.71,1.5,1.61806,orbital[Delta],,1.401e-19
+Dl(1905)5/2+,1.88,2.5,1.92832,orbital[Delta],,1.540e-19
+Dl(1910)1/2+,1.9,0.5,1.92832,orbital[Delta],,1.556e-19
+Dl(1920)3/2+,1.92,1.5,1.92832,orbital[Delta],,1.573e-19
+Lm(1405)1/2-,1.4051,0.5,1.53135,orbital[Lambda],,1.151e-19
+Lm(1520)3/2-,1.5195,1.5,1.53135,orbital[Lambda],,1.245e-19
+Lm(1670)1/2-,1.674,0.5,1.53135,orbital[Lambda],,1.371e-19
+Lm(1690)3/2-,1.69,1.5,1.53135,orbital[Lambda],,1.384e-19
+Lm(1830)5/2-,1.825,2.5,1.85616,orbital[Lambda],,1.495e-19
+Lm(1890)3/2+,1.89,1.5,1.85616,orbital[Lambda],,1.548e-19
+Lm(2100)7/2-,2.09,3.5,2.13205,orbital[Lambda],,1.712e-19
+Sg(1670)3/2-,1.675,1.5,1.58584,orbital[Sigma],,1.372e-19
+Sg(1775)5/2-,1.775,2.5,1.58584,orbital[Sigma],,1.454e-19
+Sg(1385)3/2+,1.3837,1.5,1.40461,torsion(1/2),,1.133e-19
+Xi(1530)3/2+,1.5318,1.5,1.53141,torsion(1/2),,1.255e-19
+Lm(1600)1/2+,1.6,0.5,1.66227,radial[Lambda],,1.311e-19
+Sg(1660)1/2+,1.66,0.5,1.7126,radial[Sigma],,1.360e-19
+Xi(1690)?,1.69,0.5,1.68201,orbital[Xi],,1.384e-19
+Xi(1820)3/2-,1.823,1.5,1.68201,orbital[Xi],,1.493e-19
+Xi(2030)?,2.025,2.5,1.98228,orbital[Xi],,1.659e-19
+Om(2012)3/2-,2.012,1.5,1.97418,orbital[Omega-],,1.648e-19
+D*(2007),2.00685,1,2.00894,constituant+torsion(n=1),,1.644e-19
+D*(2010)+,2.01026,1,2.00894,constituant+torsion(n=1),,1.647e-19
+D0*(2300),2.343,0,2.38459,constituant+torsion(n=4),,1.919e-19
+D1(2430),2.412,1,2.38459,constituant+torsion(n=4),,1.976e-19
+D1(2420),2.4221,1,2.44159,constituant+torsion(n=4.5),,1.984e-19
+D2*(2460),2.4611,2,2.44159,constituant+torsion(n=4.5),,2.016e-19
+Ds*(2112),2.1122,1,2.09509,constituant+torsion(n=1),,1.730e-19
+Ds1(2536),2.5351,1,2.55194,constituant+torsion(n=4.86),,2.076e-19
+Ds2*(2573),2.5691,2,2.55194,constituant+torsion(n=4.86),,2.104e-19
+B*(5325),5.32471,1,5.31402,constituant+torsion(n=1),,4.361e-19
+B1(5721),5.7257,1,5.73716,constituant+torsion(n=9.5),,4.690e-19
+B2*(5747),5.7395,2,5.73716,constituant+torsion(n=9.5),,4.701e-19
+Bs*(5415),5.4154,1,5.40553,constituant+torsion(n=1),,4.436e-19
+Bs1(5830),5.8287,1,5.83896,constituant+torsion(n=9.86),,4.774e-19
+Bs2*(5840),5.83986,2,5.83896,constituant+torsion(n=9.86),,4.783e-19
+Lc(2595)1/2-,2.5925,0.5,2.5278,constituant+orbital+torsion(n=1),,2.123e-19
+Lc(2625)3/2-,2.6281,1.5,2.5278,constituant+orbital+torsion(n=1),,2.153e-19
+Sc(2455),2.4529,0.5,2.46323,constituant+torsion(n=2.41),,2.009e-19
+Sc(2520),2.5175,1.5,2.51845,constituant+torsion(n=2.91),,2.062e-19
+Xic(2468),2.4679,0.5,2.47553,constituant+torsion(n=1),,2.021e-19
+Xic'(2578),2.5784,0.5,2.58426,constituant+torsion(n=2),,2.112e-19
+Xic(2645),2.6459,1.5,2.63694,constituant+torsion(n=2.5),,2.167e-19
+Oc(2695),2.6952,0.5,2.69503,constituant+torsion(n=1.41),,2.208e-19
+Oc(2770),2.7659,1.5,2.74559,constituant+torsion(n=1.91),,2.265e-19
+Oc(3000)LHCb,3.0004,0.5,2.89197,constituant+orbital+torsion(n=1.41),,2.458e-19
+Oc(3050)LHCb,3.0502,0.5,2.89197,constituant+orbital+torsion(n=1.41),,2.498e-19
+Oc(3066)LHCb,3.0662,1.5,2.89197,constituant+orbital+torsion(n=1.41),,2.511e-19
+Oc(3090)LHCb,3.0903,1.5,2.89197,constituant+orbital+torsion(n=1.41),,2.531e-19
+Oc(3119)LHCb,3.1191,2.5,2.89197,constituant+orbital+torsion(n=1.41),,2.555e-19
+Xicc(3621)LHCb,3.6216,0.5,3.61275,constituant+torsion(n=2.41),,2.966e-19
+Lb(5912)LHCb,5.9124,0.5,5.71818,constituant+orbital+torsion(n=1),,4.843e-19
+Lb(5920)LHCb,5.9199,1.5,5.71818,constituant+orbital+torsion(n=1),,4.849e-19
+Lb(6146)LHCb,6.1462,1.5,5.8136,constituant+orbital+torsion(n=1),,5.034e-19
+Lb(6152)LHCb,6.1526,2.5,5.8136,constituant+orbital+torsion(n=1),,5.039e-19
+Xb(5792),5.7919,0.5,5.80439,constituant+torsion(n=1),,4.744e-19
+Xb(6227)LHCb,6.2274,1.5,5.89841,constituant+orbital+torsion(n=1),,5.101e-19
+Sb(5811),5.8106,0.5,5.8136,constituant+torsion(n=5),,4.759e-19
+Sb*(5832),5.8321,1.5,5.83721,constituant+torsion(n=5.5),,4.777e-19
+Sb(6097)LHCb,6.0973,1.5,5.90747,constituant+orbital+torsion(n=5),,4.994e-19
+Xb'(5935),5.93502,0.5,5.94486,constituant+torsion(n=4),,4.861e-19
+Xb*(5955),5.95533,1.5,5.96795,constituant+torsion(n=4.5),,4.878e-19
+Ob(6046),6.0452,0.5,6.04453,constituant+torsion(n=2.24),,4.951e-19
+Bc(6274),6.27447,0,,compression(demi-quarkonium),,5.139e-19
+Bc(2S)(6871),6.8712,0,,compression(demi-quarkonium),,5.628e-19
+etac(1S),2.9839,0,3.114,Cornell(coeur 2m_c),,2.444e-19
+chic0,3.4147,0,3.114,Cornell(coeur 2m_c),,2.797e-19
+chic1,3.5107,1,3.114,Cornell(coeur 2m_c),,2.876e-19
+hc,3.5254,1,3.114,Cornell(coeur 2m_c),,2.888e-19
+chic2,3.5562,2,3.114,Cornell(coeur 2m_c),,2.913e-19
+etac(2S),3.6377,0,3.114,Cornell(coeur 2m_c),,2.980e-19
+psi(2S),3.6861,1,3.114,Cornell(coeur 2m_c),,3.019e-19
+psi(3770),3.7737,1,3.114,Cornell(coeur 2m_c),,3.091e-19
+chic2(3930),3.9225,2,3.114,Cornell(coeur 2m_c),,3.213e-19
+psi(4040),4.039,1,3.114,Cornell(coeur 2m_c),,3.308e-19
+psi(4160),4.191,1,3.114,Cornell(coeur 2m_c),,3.433e-19
+psi(4415),4.421,1,3.114,Cornell(coeur 2m_c),,3.621e-19
+etab(1S),9.3987,0,9.904,Cornell(coeur 2m_b),,7.698e-19
+chib0(1P),9.8594,0,9.904,Cornell(coeur 2m_b),,8.076e-19
+chib1(1P),9.8928,1,9.904,Cornell(coeur 2m_b),,8.103e-19
+chib2(1P),9.9122,2,9.904,Cornell(coeur 2m_b),,8.119e-19
+hb(1P),9.8993,1,9.904,Cornell(coeur 2m_b),,8.108e-19
+Ups(2S),10.0233,1,9.904,Cornell(coeur 2m_b),,8.210e-19
+chib1(2P),10.2555,1,9.904,Cornell(coeur 2m_b),,8.400e-19
+chib2(2P),10.2687,2,9.904,Cornell(coeur 2m_b),,8.411e-19
+Ups(3S),10.3552,1,9.904,Cornell(coeur 2m_b),,8.482e-19
+Ups(4S),10.5794,1,9.904,Cornell(coeur 2m_b),,8.665e-19
+Ups(10860),10.8852,1,9.904,Cornell(coeur 2m_b),,8.916e-19
+Ups(11020),11.0,1,9.904,Cornell(coeur 2m_b),,9.010e-19
+hb(2P),10.2598,1,9.904,Cornell(coeur 2m_b),,8.404e-19
+Ups(1D),10.1637,2,9.904,Cornell(coeur 2m_b),,8.325e-19
+X(3872)=DD*,3.87165,1,3.87594,molecule(socle),,3.171e-19
+Zc(3900)=DD*,3.8875,1,3.87594,molecule(socle),,3.184e-19
+Zc(4020)=D*D*,4.0243,1,4.01788,molecule(socle),,3.296e-19
+Zcs(3985)=DsD*,3.9827,1,3.96834,molecule(socle),,3.262e-19
+Tcc(3875)=DD*,3.8748,1,3.87594,molecule(socle),,3.174e-19
+Zb(10610)=BB*,10.6072,1,10.57602,molecule(socle),,8.688e-19
+Zb(10650)=B*B*,10.6522,1,10.62804,molecule(socle),,8.725e-19
+Pc(4312)=ScD,4.3119,0.5,4.33023,molecule(socle),,3.532e-19
+Pc(4380)=Sc*D,4.38,1.5,4.38545,molecule(socle),,3.588e-19
+Pc(4440)=ScD*,4.4403,0.5,4.47217,molecule(socle),,3.637e-19
+Pc(4457)=ScD*,4.4573,1.5,4.47217,molecule(socle),,3.651e-19
+Pcs(4459)=XicD*,4.4588,0.5,4.48447,molecule(socle),,3.652e-19
+Pcs(4338)=XicD,4.3382,0.5,4.34253,molecule(socle),,3.553e-19
+X0(2900)=D*K*,2.866,0,2.90211,molecule(socle),,2.347e-19
+Ds0*(2317)=DK,2.3178,0,2.3607,molecule(socle),,1.898e-19
+Ds1(2460)=D*K,2.4595,1,2.50264,molecule(socle),,2.015e-19
+X(4140),4.1465,1,3.9188,constituant(exot.),,3.396e-19
+X(4274),4.2864,1,4.05676,constituant(exot.)+orb,,3.511e-19
+X(4500),4.474,0,4.19018,constituant(exot.)+orb,,3.665e-19
+X(4700),4.694,0,4.31948,constituant(exot.)+orb,,3.845e-19
+X(6600)LHC,6.638,0,6.228,constituant(exot.),,5.437e-19
+X(6900)LHC,6.899,0,6.40223,constituant(exot.)+orb,,5.651e-19
+X(7200)LHC,7.22,0,6.57185,constituant(exot.)+orb,,5.914e-19
+Y(4230),4.2225,1,3.734,constituant(exot.),,3.459e-19
+f0(500),0.475,0,,propre(multiquark),,3.891e-20
+f0(980),0.99,0,,propre(multiquark),,8.109e-20
+a0(980),0.98,0,,propre(multiquark),,8.027e-20
+f0(1370),1.37,0,,propre(multiquark),,1.122e-19
+f0(1500),1.506,0,1.5,glueball(amphichiral),,1.234e-19
+f0(1710),1.704,0,,propre(multiquark),,1.396e-19
+a1(1260),1.23,1,,propre(axial),,1.007e-19
+f1(1285),1.2819,1,,propre(axial),,1.050e-19
+f1(1420),1.4262,1,,propre(axial),,1.168e-19
+h1(1170),1.166,1,,propre(axial),,9.550e-20
+K1(1270),1.253,1,,propre(axial),,1.026e-19
+K1(1400),1.403,1,,propre(axial),,1.149e-19
+eta(1405),1.4098,0,,propre,,1.155e-19

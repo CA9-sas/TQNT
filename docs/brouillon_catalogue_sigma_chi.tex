@@ -1,0 +1,476 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2cm]{geometry}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\newcommand{\Lk}{\mathrm{Lk}}
+
+\title{Catalogue $\sigma_\chi$ : la masse comme $m=\sqrt{\sigma_\chi}\,\mathcal{S}$\\
+\large TQNT --- une échelle dimensionnelle, un facteur topologique par catégorie}
+\author{L. Cariou}
+\date{Juillet 2026 --- brouillon de travail}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}[colback=blue!5,colframe=blue!50!black,title=Équation maîtresse]
+\[
+\boxed{\; m \;=\; \sqrt{\sigma_\chi}\;\times\;\mathcal{S} \;}
+\qquad
+\sqrt{\sigma_\chi}=418{,}47~\text{MeV},\quad
+\sigma_\chi=\frac{\sigma_{\rm Regge}}{2\pi}=0{,}1751~\text{GeV}^2,\quad
+\Lambda_\chi=\tfrac12\sqrt{\sigma_\chi}=209{,}2~\text{MeV}.
+\]
+\begin{itemize}\itemsep2pt
+\item $\sqrt{\sigma_\chi}$ est \textbf{la seule entrée dimensionnelle} (théorème d'analyse dimensionnelle : la topologie est sans dimension). \emph{Recalibrée 2026-07-18} : les deux secteurs « tout dérivé » (leptons, $\mu_{\rm Koide}=\tfrac34\sqrt{\sigma_\chi}$ ; base octet) demandaient le \emph{même} décalage $+0{,}2\,\%$ (accord mutuel $7\times10^{-5}$) --- $417{,}65\to418{,}47\pm0{,}02$~MeV, soit $\alpha'=0{,}9088$~GeV$^{-2}$, dans la fourchette Regge ($\pm2\,\%$) que les secteurs dérivés pincent $30\times$ mieux. Les quatre états-phares ($e,\mu,\tau,p$) tombent à $\leq0{,}005\,\%$ ; les corrections calibrées ($\Delta_s$, $\tau_\perp$, bases décuplet/vecteur, $B$ GMOR) se recalibrent et réabsorbent (\texttt{recalibration\_sqrt\_sigma.py}).
+\item $\mathcal{S}=m/\sqrt{\sigma_\chi}$ est le \textbf{facteur sans dimension} --- trivialement défini (c'est $m$ en unités de $\sqrt{\sigma_\chi}$), mais \emph{topologique} seulement là où une loi de catégorie le prédit (Koide, Regge).
+\item La \textbf{configuration de nœuds} porte le \textbf{spin} (indice de tresse) et la \textbf{charge} ($Q=\Sigma\chi+\mathrm{Lk}$) --- \emph{pas la masse}. L'ancienne formule géométrique par nœud $\Omega_{ts}$ (V6) est \textbf{abandonnée} comme prédicteur de masse (phénoménologique : 34\,\% à assignation fixée, 0{,}3\,\% par surajustement).
+\end{itemize}
+\end{tcolorbox}
+
+\section{Catégorisation topologique : $\mathcal{S}$ par catégorie}
+
+Le facteur $\mathcal{S}$ n'obéit pas à une loi universelle ; il se \emph{décline par catégorie}, indexée par le nombre de brins $p$ de l'objet topologique.
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Catégorie & Objet & Loi de $\mathcal{S}$ & Précision \\
+\midrule
+BASE ($p=1$) & onde $\chi$ libre (pas de nœud) & $\mathcal{S}=0$ & exacte ($\gamma$, $\nu$) \\
+LEPTONS ($p=2$) & $3_1$, modes $Z_3$ & $\mathcal{S}_k=\tfrac34\bigl(1+\sqrt2\cos(\tfrac29+\tfrac{2\pi k}{3})\bigr)^2$ & \textbf{0{,}2\,\%} (Koide) \\
+BARYONS ($p=3$) & entrelacs, trajectoire Regge & $\mathcal{S}=\sqrt{2\pi(J-\alpha_0)}$, $\alpha_0\simeq-0{,}30$ & nucléon 0{,}2\,\% \\
+MÉSONS & $K+\bar K$ (nœud+miroir) & Regge $J\ge1$ léger ; quarkonia $\to$ Cornell & $\rho/\omega\sim$5\,\% \\
+ÉLECTROFAIBLE & entrelacs non confinés & (hors Regge simple) & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Leptons (Koide).}
+$A=\sqrt2=d_{1/2}(k{=}2)$ (dimension quantique d'Ising) est un \emph{hint} --- $Q=(1+A^2/2)/3=2/3$ empirique et $d_\sigma{=}\sqrt2$ (fusion Ising) se rencontrent, mais le pont amplitude$=$dimension échoue (tight-binding non prédictif). En revanche la phase $\theta=2/9=Q/3$ et l'échelle $M=\Lambda_\chi/Q=\tfrac32\Lambda_\chi$ sont \emph{suggestives} (numériquement justes, non forcées). Avec ces trois, les \emph{trois} masses leptoniques absolues tombent à 0{,}19\,\% et les rapports $m_\mu/m_e,m_\tau/m_e$ à 0{,}2\,\% --- le hint le plus sérieux du cadre, mais pas «~sans paramètre~».
+
+\paragraph{Baryons (Regge + $Z_3$ d'étrangeté).}
+La trajectoire dominante $\mathcal{S}=\sqrt{2\pi(J-\alpha_0)}$ place le nucléon ($J=\tfrac12$) à 0{,}0\,\% (recalibration 2026-07-18) et le $\Omega^-$ ($J=\tfrac32$) à 0{,}7\,\%. L'écart intra-multiplet (octet/décuplet, RMS 35\,\% à intercept unique) \textbf{n'est pas géométrique} : c'est le quantum d'étrangeté $E_{Z_3}=\tfrac23\Lambda_\chi=139$~MeV (corrélation 0{,}975 avec le nombre d'étrangeté ; égal-espacement décuplet 1{,}1\,\%).
+
+\paragraph{Mésons.}
+Secteur «~tout le reste~» ($B=0$, matière+antimatière $=K+\bar K$) : pas de nœud méson unique. Les vecteurs légers $\rho,\omega$ suivent le Regge à $\sim$5\,\% ; les quarkonia lourds $J/\psi,\Upsilon$ \emph{sortent} de la pente légère (secteur Cornell, fermé séparément en V5.37b, $\Sigma|\log|=0{,}15$~dex) --- leur grand $\mathcal{S}$ ci-dessous n'est \emph{pas} un échec de $\sqrt{\sigma_\chi}$ mais le signe qu'ils appartiennent à une autre trajectoire.
+
+\section{Le catalogue}
+
+Trié par masse. \textbf{Config} $=$ porteur de spin+charge (assignations V6 ; les 8 «~aucune~» sont \emph{comblées}, cf.\ note ; les EW passent aux assignations autoritatives \texttt{ew\_vev\_derivation}, qui prévalent sur le xlsx). \textbf{$m_{\rm théo}$} vient de la loi du secteur, étiquetée en dernière colonne :
+\begin{itemize}\itemsep1pt
+\item \textbf{secteur léger} (u,d,s confinés) --- la loi $\sigma_\chi$ propre : $m=\sqrt{\sigma_\chi}\,\mathcal{S}$, Koide (leptons), Regge$+Z_3(+\tau_\perp,\Delta\mathrm{Lk})$ (baryons/vecteurs), $0$ (base).
+\item \textbf{secteur Goldstone} ($\pi,K,\eta$ pseudoscalaires) --- brisure chirale : $m_{\rm PS}^2=B(m_i{+}m_j)$ (GMOR, $m\propto\sqrt{m_q}$) ; $\pi,K$ calibrent, $\eta$ prédit ($+3{,}4\,\%$, Gell-Mann--Okubo). Le $\eta'$ est à part : masse d'anomalie $U(1)_A$ (topologique).
+\item \textbf{secteur lourd} ($c,b$) --- \emph{constituant} : $m=\sum_i m_i$ avec $m_c=1557$, $m_b=4952$~MeV (2 paramètres calibrés sur les 8 états lourds ; $m_l=310$ calibré du secteur léger, $m_s=m_\ell\,\ell(5_2)/\ell(3_1)=494{,}8$~MeV \emph{dérivé}, 2026-07-15 ; \textbf{DÉCLASSÉ 2026-07-22 (audit ACPR + chasse à la fonctionnelle)} : le ratio reposait sur $\ell(5_2)=52{,}26$ (borne lâche) --- ACPR donne $49{,}4704$, soit $m_s^{\rm géo}=468{,}3$ ($-5{,}4\,\%$) ; fenêtre $\pm2\,\%$ vide $\Rightarrow$ épinglage $5_2$ renforcé ; habillage $+5{,}6\,\%$ non géométrique (scan exhaustif négatif) $\Rightarrow$ $m_s$ = \emph{calibré} $+$ indice géométrique $5_2$ ; la valeur $494{,}8$ tient par les données et reste utilisée ; comptage global $9\to10$). RMS $2{,}35\,\%$ (inchangé sous la contrainte géométrique). Les quarkonia $c\bar c,b\bar b$ sont affinés par le liage de Cornell (V5.37b). \emph{Retouche validée 2026-07-21} : les baryons lourds portent en sus la \textbf{torsion de recouplage} $\Delta M^2 = n\,\pi\sigma_\chi$ avec $n = S_{\rm paire}+J+\tfrac12$ (quantum $=$ demi-tour du ruban périphérique, vérifié universel $V{-}P$ à $0{,}7\,\%$ ; \texttt{calcul\_reparation\_sigmac\_torsion.py}) --- $\Lambda_c$ passe de $-4{,}8$ à $+0{,}6\,\%$, $\Lambda_b$ de $-0{,}8$ à $+0{,}0\,\%$ ($n{=}1$, quartet antisymétrique à $0{,}3\,\%$ de moyenne). \emph{Demi-substitution (2026-07-21)}~: dans un méson (tube commun $K{+}\bar K$), $\ell\to s$ coûte $(m_s{-}m_\ell)/2$ --- c\oe ur$(H_s) = m_Q + (m_\ell{+}m_s)/2$~: $D_s \to -0{,}5\,\%$, $B_s \to -0{,}2\,\%$ (\texttt{resolve\_coeurs\_dsbs.py}) ; dans un baryon (jambes propres), le plein.
+\item \textbf{secteur électrofaible} (W,Z,H,top) --- entrelacs \emph{non confinés} (pas de corde $\chi$, donc pas de Regge) : masses dérivées du VEV (\texttt{ew\_vev\_derivation}), $<1{,}3\,\%$.
+\end{itemize}
+Aucun «~---~» ne subsiste : chaque particule est valorisée par le cadre de \emph{son} secteur, honnêtement étiqueté --- la loi $\sigma_\chi$ pour le léger, le constituant pour le lourd, le VEV pour l'électrofaible.
+
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}llccrrrl@{}}
+\toprule
+Part. & Config (spin+charge) & $J$ & $Q$ & $m_{\rm exp}$ & $m_{\rm théo}$ & $\Delta m\%$ & secteur \\
+\midrule
+\endhead
+$\gamma$ & --- & $1$ & $+0$ & 0.0 & $0$ & exact & --- \\
+$\nu$ & --- & $\tfrac12$ & $+0$ & 0.0 & $0$ & exact & --- \\
+$e^-$ & $3_{1}$ & $\tfrac12$ & $-1$ & 0.5 & 0.511 & $-0.0$ & Koide \\
+$\mu^-$ & $3_{1}$ & $\tfrac12$ & $-1$ & 105.7 & 105.7 & $-0.0$ & Koide \\
+$\pi^0$ & $3_{1}{+}5_{1}$ & $0$ & $+0$ & 135.0 & 135.0 & anc. & GMOR \\
+$\pi^+$ & $3_{1}{+}5_{1}$ & $0$ & $+1$ & 139.6 & 139.6 & anc. & GMOR \\
+$K^+$ & $3_{1}{+}7_{1}$ & $0$ & $+1$ & 493.7 & 493.7 & anc. & GMOR \\
+$K^0$ & $3_{1}{+}7_{1}$ & $0$ & $+0$ & 497.6 & 497.6 & anc. & GMOR \\
+$\eta$ & $6_{1}{+}6_{1}{+}6_{1}$ & $0$ & $+0$ & 547.9 & 567 & $+3.4$ & GMO \\
+$\rho$ & $4_{1}{+}5_{2}{+}6_{1}$ & $1$ & $+1$ & 775.3 & 755.0 & $-2.6$ & Regge ($\alpha_0{=}0{,}48$) \\
+$\omega$ & $3_{1}{+}4_{1}{+}5_{1}$ & $1$ & $+0$ & 782.6 & 755.0 & $-3.5$ & Regge ($\alpha_0{=}0{,}48$) \\
+p & $3_{1}{+}7_{2}{+}7_{2}$ & $\tfrac12$ & $+1$ & 938.3 & 938.2 & $-0.0$ & Regge+$Z_3$ \\
+n & $3_{1}{+}7_{2}{+}7_{2}$ & $\tfrac12$ & $+0$ & 939.6 & 938.2 & $-0.1$ & Regge+$Z_3$ \\
+$\eta'$ & $3_{1}{+}3_{1}{+}6_{1}$ & $0$ & $+0$ & 957.8 & 958 & anom. & anomalie $U(1)_A$ \\
+$\phi$ & $7_{5}{+}7_{5}$ & $1$ & $+0$ & 1019.5 & 1019.5 & $+0.0$ & Regge+étr. \\
+$\Lambda$ & $3_{1}{+}4_{1}{+}7_{2}$ & $\tfrac12$ & $+0$ & 1115.7 & 1114.7 & $-0.1$ & Regge+$\Delta_s$ \\
+$\Sigma^+$ & $3_{1}{+}6_{1}{+}7_{2}$ & $\tfrac12$ & $+1$ & 1189.4 & 1192.8 & $+0.3$ & Regge+$\Delta_s$+$\tau_\perp$ \\
+$\Sigma^-$ & $3_{1}{+}6_{1}{+}7_{2}$ & $\tfrac12$ & $-1$ & 1197.5 & 1192.8 & $-0.4$ & Regge+$\Delta_s$+$\tau_\perp$ \\
+$\Delta$ & $3_{1}{+}5_{2}{+}7_{4}$ & $\tfrac32$ & $+1$ & 1232.0 & 1232.1 & $+0.0$ & Regge \\
+$\Xi^0$ & $3_{1}{+}6_{2}{+}7_{2}$ & $\tfrac12$ & $+0$ & 1314.9 & 1339.8 & $+1.9$ & Regge+$\Delta_s$+$\tau_\perp$ \\
+$\Xi^-$ & $3_{1}{+}6_{2}{+}7_{2}$ & $\tfrac12$ & $-1$ & 1321.7 & 1339.8 & $+1.4$ & Regge+$\Delta_s$+$\tau_\perp$ \\
+$\Omega^-$ & $5_{1}{+}7_{2}{+}7_{2}$ & $\tfrac32$ & $-1$ & 1672.5 & 1673.1 & $+0.0$ & Regge+$\Delta_s$+$\tau_\perp$ \\
+$\tau^-$ & $3_{1}$ & $\tfrac12$ & $-1$ & 1776.9 & 1776.9 & $+0.0$ & Koide \\
+$D^0$ & $3_{1}{+}5_{2}{+}9_{1}$ & $0$ & $+0$ & 1864.8 & 1867 & $+0.1$ & constituant \\
+$D^+$ & $3_{1}{+}7_{6}$ & $0$ & $+1$ & 1869.7 & 1867 & $-0.1$ & constituant \\
+$D_s^+$ & $7_{2}{+}9_{1}{+}9_{1}$ & $0$ & $+1$ & 1968.3 & 1959.4 & $-0.5$ & const.$+$demi-subst. \\
+$\Lambda_c$ & $3_{1}{+}4_{1}{+}8_{1}$ & $\tfrac12$ & $+1$ & 2286.5 & 2299.9 & $+0.6$ & const.+torsion($n{=}1$) \\
+$J/\psi$ & $4_{1}{+}4_{1}{+}8_{1}$ & $1$ & $+0$ & 3096.9 & 3097 & $+0.0$ & Cornell ($\sigma_\chi$) \\
+$B^+$ & $6_{2}{+}7_{3}{+}7_{3}$ & $0$ & $+1$ & 5279.3 & 5210 & $-1.3$ & constituant \\
+$B^0$ & $6_{2}{+}7_{3}{+}7_{3}$ & $0$ & $+0$ & 5279.7 & 5210 & $-1.3$ & constituant \\
+$B_s^0$ & $3_{1}{+}6_{2}{+}6_{3}$ & $0$ & $+0$ & 5366.9 & 5354.4 & $-0.2$ & const.$+$demi-subst. \\
+$\Lambda_b$ & $4_{1}{+}6_{3}{+}7_{2}$ & $\tfrac12$ & $+0$ & 5619.6 & 5621.2 & $+0.0$ & const.+torsion($n{=}1$) \\
+$\Upsilon$ & $4_{1}{+}5_{2}{+}7_{4}$ & $1$ & $+0$ & 9460.3 & 9456 & $-0.0$ & Cornell ($\sigma_\chi$) \\
+W & $7_{1}{+}7_{2}{+}8_{3}$ & $1$ & $+1$ & 80377.0 & 80680 & $+0.4$ & EW (VEV) \\
+Z & $7_{2}{+}8_{3}{+}9_{1}$ & $1$ & $+0$ & 91188.0 & 90560 & $-0.7$ & EW (VEV) \\
+H & $7_{1}{+}8_{3}{+}10_{1}$ & $0$ & $+0$ & 125250.0 & 125260 & $+0.0$ & EW (VEV) \\
+top & $8_{2}{+}8_{3}{+}10_{1}$ & $\tfrac12$ & $+1$ & 172690.0 & 170410 & $-1.3$ & EW (VEV) \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\noindent\textbf{Lecture.} Masses en MeV. $m_{\rm théo}=\sqrt{\sigma_\chi}\,\mathcal{S}_{\rm cat}$, $\Delta m\%=(m_{\rm théo}-m_{\rm exp})/m_{\rm exp}$. Lois : Koide $\mathcal{S}_k=\tfrac34(1+\sqrt2\cos(\tfrac29+\tfrac{2\pi k}{3}))^2$ ; Regge baryon $m=938{,}2+n_{Z_3}\cdot139{,}5$ ($J=\tfrac12$), décuplet $1232+n_{Z_3}\cdot139{,}5$ ($J=\tfrac32$, base ancrée par l'hyperfin $N$-$\Delta$ calibré) ; vecteur $740+n_{Z_3}\cdot139{,}5$. Le \emph{mode $Z_3$} $n_{Z_3}$ (ex-«~étrangeté~», quantum topologique et non étiquette SM) porte $E_{Z_3}=\tfrac23\Lambda_\chi=139{,}5$~MeV ($m_\pi$ à $-0{,}06\,\%$) : $\Lambda,\Sigma{=}1$ ; $\Xi{=}2$ ; $\Omega,\phi(s\bar s){=}2$--$3$. \textbf{RMS par secteur} (après corrections \emph{calibrées}) : Koide 0{,}003\,\%, vecteur 2{,}5\,\% ($\rho,\omega$ à intercept physique ; $\phi$ 0\,\%), baryons (octet$+$décuplet, 8 états) 0{,}75\,\% via les trois corrections ci-dessous ($\Delta_s$ additif, $\tau_\perp$ hyperfin \emph{calibré}, $\Delta\mathrm{Lk}$ isospin ; \emph{4{,}2\,\% avec le seul comptage $Z_3$}).
+
+\paragraph{Le split $\Sigma{-}\Lambda$ résolu par le terme hyperfin $\tau_\perp$.}
+$\Lambda$ et $\Sigma$ partagent config, $J$ et $n_{Z_3}$ : $Z_3$ seul les prédit \emph{identiques} (1075~MeV), d'où l'écart initial de $\sim$10\,\%. Le split ($\sim$77~MeV) est de la structure fine \emph{hyperfine} --- le \emph{même} contact spin-spin $\tau_\perp$ de la corde $\chi$ qui produit le split $N{-}\Delta$ :
+\[
+E_{\tau_\perp}=C\,\frac{\mathbf{S}_i\!\cdot\!\mathbf{S}_j}{m_i m_j},\qquad C=k_\perp\Lambda_\chi^3 .
+\]
+Le diquark léger $ud$ est en spin $0$ dans $\Lambda$ ($\mathbf{S}_u\!\cdot\!\mathbf{S}_d=-\tfrac34$) et en spin $1$ dans $\Sigma$ ($+\tfrac14$), d'où
+\[
+M_\Sigma-M_\Lambda=\frac{C}{m_l^2}\Bigl(1-\frac{m_l}{m_s}\Bigr).
+\]
+Deux identifications TQNT, sans nouveau paramètre : $m_l=\Lambda_\chi$ (constituant léger $=$ échelle $\chi$) et $m_s=\Lambda_\chi+E_{Z_3}=\tfrac53\Lambda_\chi$ (un mode $Z_3$ de plus), soit $m_l/m_s=\tfrac35$. En calibrant $C$ sur $N{-}\Delta$ ($M_\Delta-M_N=293=\tfrac32\,C/m_l^2$, d'où $k_\perp=0{,}94\approx1$) :
+\[
+\boxed{\;M_\Sigma-M_\Lambda=\frac{C}{m_l^2}\cdot\frac25=78{,}1~\text{MeV}\;}\quad(\text{exp }77{,}4,\ +0{,}9\,\%).
+\]
+Le \emph{rapport} ne contient aucun paramètre \emph{ajusté} (algèbre de spin $+$ ratio $m_l/m_s=3/5$, ce dernier reposant sur l'identification $m_l=\Lambda_\chi$, suggestive) :
+\[
+\frac{M_\Sigma-M_\Lambda}{M_\Delta-M_N}=\frac23\Bigl(1-\frac{m_l}{m_s}\Bigr)=\frac23\cdot\frac25=\frac{4}{15}=0{,}267\qquad(\text{exp }0{,}263,\ +1{,}5\,\%).
+\]
+\emph{Réserve d'honnêteté}~: cette algèbre de spin est \textbf{exactement} le calcul hyperfin standard SU(6) / quark constituant (De~Rújula--Georgi--Glashow 1975)~; la TQNT ne change que l'\emph{interprétation} de l'opérateur ($\tau_\perp$ flux-tube au lieu de color-magnétique un-gluon), pas la forme $\mathbf S_i\!\cdot\!\mathbf S_j/(m_im_j)$ ni le résultat. Ce n'est donc \emph{pas} un discriminant TQNT~; et le \emph{théorème} est $\tfrac23(1-m_l/m_s)$ --- le $4/15$ exige la valeur suggestive $m_l/m_s=3/5$.
+Appliqué à tout l'octet ($E_{\tau_\perp}$ par membre, ancré sur le nucléon), il fait passer $\Sigma$ de $-10\,\%$ à $-3{,}3\,\%$ et $\Xi$ ($ss$ en spin $1$) de $-7{,}9\,\%$ à $-4{,}3\,\%$ --- RMS octet $6{,}9\to3{,}3\,\%$.
+
+\paragraph{Le split isospin $\Sigma^+{-}\Sigma^-$ par $\Delta\mathrm{Lk}$/EM.}
+Dans un multiplet d'isospin, les états ne diffèrent que par l'enlacement $\mathrm{Lk}$ ($Q=\Sigma\chi+\mathrm{Lk}$, ici $\Sigma\chi{=}{-}1$ fixe pour $3_1{+}6_1{+}7_2$) : $\Sigma^+(\mathrm{Lk}{=}{+}2),\ \Sigma^0({+}1),\ \Sigma^-(0)$. Le split ($\sim$8~MeV) est \emph{électromagnétique}, pas hyperfin. Écrivant $M(Q)=M_0+b\,Q+c\,Q^2$ :
+\begin{itemize}\itemsep1pt
+\item terme \textbf{linéaire} $b=-4{,}04$~MeV/charge --- l'asymétrie $\Delta\mathrm{Lk}$ («~down-heavy~») : $M_{\Sigma^-}-M_{\Sigma^+}=-2b=8{,}08$~MeV. Le linéaire porte \emph{tout} le split.
+\item terme \textbf{Coulomb} $c=+0{,}77$~MeV --- la self-énergie EM des états chargés : $\Sigma^0$ tombe $0{,}77$~MeV \emph{sous} le milieu $(\Sigma^+,\Sigma^-)$, exactement $-c$.
+\end{itemize}
+Comme $Q-\Sigma\chi=\mathrm{Lk}$ est un \emph{seul} enlacement abélien (transformant au plus en $I{=}1$, \textbf{aucune pièce $I{=}2$}), les décalages EM obéissent à la relation de Coleman-Glashow --- ce qui relie le split $\Sigma$ directement au split $n{-}p$ (le même $\Delta\mathrm{Lk}$) et à $\Xi$, \emph{sans paramètre} :
+\[
+\boxed{\;M_{\Sigma^-}-M_{\Sigma^+}=(M_n-M_p)+(M_{\Xi^-}-M_{\Xi^0})\;}
+=1{,}29+6{,}85=8{,}14~\text{MeV}\quad(\text{exp }8{,}08,\ +0{,}8\,\%).
+\]
+Ainsi tous les splits d'isospin de l'octet ($n{-}p$, $\Sigma^\pm$, $\Xi$) découlent du \emph{même} mécanisme $\Delta\mathrm{Lk}$ : un pas d'enlacement change $Q$ d'une unité ; le nucléon en a un, le $\Sigma$ en a deux. \emph{Réserve d'honnêteté}~: avec charge additive et énergie EM $=a\sum q_i^2+b\sum_{i<j}q_iq_j$, l'identité $(\Sigma^-{-}\Sigma^+){-}(n{-}p){-}(\Xi^-{-}\Xi^0)=0$ est \textbf{exacte en $a,b$} --- mais c'est \emph{exactement} le CG standard (quark-constituant/U-spin, 1961), \emph{pas} un discriminant TQNT. Point fort propre~: il tient \emph{sans quarks} (3 composantes d'entrelacs). Et « abélien » seul ne suffit pas~: il faut \emph{aussi} l'universalité de $a,b$ (couplage EM indépendant du contenu $Z_3$ $=$ invariance U-spin), hypothèse au-delà de l'abélien.
+
+\paragraph{Le décalage systématique $-3{,}3\,\%$ des étranges : coût additif vs espacement.}
+Avec le seul comptage $Z_3$ (base $+\,n_s E_{Z_3}$, $E_{Z_3}=\tfrac23\Lambda_\chi=139$), \emph{tous} les baryons étranges tombaient $\sim$3--7\,\% trop légers, d'autant plus que $n_s$ est grand. Cause : $E_{Z_3}=139$ est l'\textbf{espacement} du décuplet, or
+\[
+\text{espacement}=\underbrace{\Delta_s}_{\text{coût additif}}-\underbrace{\delta_{\rm hf}}_{\text{réduction hyperfine}},
+\]
+car le quark étrange, plus lourd, \emph{réduit} l'énergie hyperfine ($1/m_s<1/m_l$). Utiliser l'espacement comme coût additif retranche $\delta_{\rm hf}$ une fois de trop. La réduction se dérive de la \emph{même} constante $\tau_\perp$ :
+\[
+\delta_{\rm hf}=\frac{C}{2m_l^2}\Bigl(1-\frac{m_l}{m_s}\Bigr)=\frac{195{,}3}{2}\cdot\frac25=39{,}1~\text{MeV},
+\]
+d'où le coût additif, \textbf{sans nouveau paramètre} :
+\[
+\boxed{\;\Delta_s=E_{Z_3}+\delta_{\rm hf}=139+39=178~\text{MeV}\;}\quad(=0{,}85\,\Lambda_\chi).
+\]
+En remplaçant $E_{Z_3}\to\Delta_s$ dans le terme \emph{additif} (l'espacement observé $139$ reste $\Delta_s-\delta_{\rm hf}$), le décalage disparaît sur \emph{tout} le multiplet : $\Lambda\,{-}0{,}1$, $\Sigma\,{+}0{,}3/{-}0{,}4$, $\Delta\,0{,}0$, $\Sigma^*\,{-}1{,}0$, $\Xi^*\,{-}0{,}9$, $\Omega\,0{,}0$\,\% ($\Xi$ seul à $+1{,}6\,\%$). \textbf{RMS des 8 baryons $4{,}2\to0{,}75\,\%$.} Le $-3{,}3\,\%$ n'était donc pas un manque physique mais une confusion \emph{espacement}$\leftrightarrow$\emph{coût additif} --- résolue par le même $\tau_\perp$.
+
+\paragraph{Les deux résidus restants : $\Xi$ et $\rho/\omega$.}
+\emph{$\Xi$ ($+1{,}6\,\%$) --- diagnostic complet.} Le coût additif est cohérent ($\Lambda$ et $\Omega$ donnent tous deux $\Delta_s\simeq179$) : ce n'est pas l'additif, mais l'hyperfin de l'unique état à \emph{deux} quarks étranges de l'octet. On a testé un $|\psi(0)|^2$ \emph{dépendant de la saveur} sous deux formes :
+\begin{itemize}\itemsep1pt
+\item $|\psi_{ij}(0)|^2\propto\mu_{ij}^{\,p}$ (loi de masse réduite, forme physique $p{>}0$) : une puissance \emph{unique} lie le couplage $ls$ (qui fixe $\Sigma{-}\Lambda$) au couplage $ss$ (qui fixe $\Xi$). Amener $\Xi\to0$ ($p{\simeq}0{,}6$) fait \emph{chuter} $\Sigma{-}\Lambda$ de $78$ à $61$~MeV --- on casse le résultat $4/15$. La direction physique aggrave $\Sigma{-}\Lambda$.
+\item $|\psi_{ss}(0)|^2$ libre (même-saveur seul, $w_{ls}$ figé) : baisser $w_{ss}$ corrige $\Xi$ mais casse $\Omega$ ($sss$), qui exige $w_{ss}$ standard. Exigences opposées.
+\end{itemize}
+\textbf{Aucun $|\psi(0)|^2$ pairwise ne fixe $\Xi$} sans dégrader $\Sigma{-}\Lambda$ ou $\Omega$. La vraie signature : $\Xi$ \emph{trop lourd} \textbf{et} $\Xi^*$ \emph{trop léger} --- le splitting hyperfin $\Xi^*{-}\Xi$ est sous-estimé ($176$ vs $214$~MeV, $\times1{,}21$). Le $|\psi(0)|^2$ correct est donc \emph{au niveau de l'état}, pas pairwise : le baryon \emph{doublement} étrange est plus \textbf{compact} (deux quarks lourds $\Rightarrow$ rayon plus petit $\Rightarrow |\psi(0)|^2$ global $\uparrow$). Un facteur d'état $\times1{,}21$ renforce \emph{tout} l'hyperfin $ssl$ et corrige $\Xi\to+0{,}0\,\%$ \emph{et} $\Xi^*\to+0{,}2\,\%$ \emph{simultanément}. Mais c'est un effet à trois corps (taille de l'état), \emph{hors} de l'ansatz pairwise $\sigma_\chi{+}$Regge${+}\tau_\perp$, et le $1{,}21$ est \emph{ajusté} (il faudrait résoudre la fonction d'onde à 3 corps pour le dériver). \textbf{Conclusion honnête :} la prédiction du catalogue (hyperfin pairwise, $\tau_\perp$ calibré) reste $\Xi\,{+}1{,}6\,\%$ ; le résidu n'est pas un $|\psi(0)|^2$ de saveur mais la \emph{compacité à 3 corps} de l'état doublement étrange --- un raffinement à un facteur, physiquement identifié mais non dérivé ici.
+
+\emph{$\rho,\omega$ ($-4{,}5/-5{,}4\,\%$).} Les vecteurs légers sont sur la trajectoire de Regge mésonique ; l'écart venait d'un intercept trop haut ($\alpha_0{=}0{,}50$). Avec l'intercept \emph{physique} $\alpha_0\simeq0{,}48$ (trajectoire mesurée $\rho$-$a_2$-$\rho_3$, l'analogue mésonique du $-0{,}30$ baryonique), $\rho,\omega\to-2{,}6/-3{,}5\,\%$. Le résidu $\sim$3\,\% est la déviation de l'état \emph{fondamental} ($J{=}1$, le plus bas) vis-à-vis de la trajectoire linéaire asymptotique --- le bas d'une trajectoire dévie toujours le plus. Le $\phi$ ($s\bar s$) confirme la cohérence : coût étrange \emph{mésonique} $(\phi-\text{base})/2=132$~MeV ($\neq178$ baryonique, car l'hyperfin $q\bar q$ diffère de $qq$), d'où $\phi$ exact ; l'ancien $\phi$ à $0{,}1\,\%$ (base $740+2{\times}139$) était une \emph{compensation} de deux erreurs, maintenant levée. Le split $\omega-\rho$ ($7{,}3$~MeV) est le mélange isoscalaire-isovecteur, effet EM fin.
+
+\paragraph{Assignations comblées (les 8 «~aucune~»).} Recherche dans le catalogue V6 complet (7695 configs) par \emph{spin+charge} (critère $\sigma_\chi$, la masse ne sélectionne pas), en préférant le nœud-cœur de catégorie : $\pi^0=3_1{+}5_1$ (comme $\pi^+$, $\mathrm{Lk}{=}0$) ; $K^\pm/K^0=3_1{+}7_1$ ; $\eta'=3_1{+}3_1{+}6_1$ ; $\Lambda=3_1{+}4_1{+}7_2$, $\Xi=3_1{+}6_2{+}7_2$ (cœur octet $7_2$) ; $\mathrm{top}=8_2{+}8_3{+}10_1$ (cœur EW $8_3$, $=$ assignation canonique). \textbf{Sous-détermination assumée} : $\Lambda,\Xi^0$ et le neutron partagent $(B,J,Q)$ --- la strangeness n'étant pas un quantum topologique (Règle 0), ils ne diffèrent que par le \emph{config} (choisi, non unique) et par le \emph{mode $Z_3$} qui porte la masse.
+
+\paragraph{Audit de cohérence des cœurs.} Le principe catégoriel (memory) veut un \emph{nœud-cœur} par famille : leptons $3_1$, octet $7_2$, décuplet $5_2$, électrofaible $8_3$. Vérification sur tout le catalogue : \textbf{leptons} ($e,\mu,\tau$ tous $3_1$) et \textbf{EW} (W,Z,H,top contiennent tous $8_3$) sont cohérents. L'\textbf{octet} l'est presque : $N,\Lambda,\Xi$ portent $7_2$, mais le $\Sigma$ (jadis $4_1{+}4_1{+}5_1$) ne l'avait pas --- \emph{réassigné} $3_1{+}6_1{+}7_2$ (cœur $7_2$, distinct de $\Lambda,\Xi$). Le \textbf{décuplet} : le $\Delta$ (jadis $5_1{+}6_1{+}6_1$) gagne le cœur $5_2$ \emph{et} se simplifie en $3_1{+}5_2{+}7_4$ ($\Sigma\mathrm{cr}\,17\to15$). \textbf{Le $\Omega^-$ résiste} : aucun entrelacs à $5_2$ ne réalise $(B{=}1,J{=}\tfrac32,Q{=}{-}1)$ dans le catalogue --- le coin $sss$ garde $5_1{+}7_2{+}7_2$, exception assumée. Les masses sont inchangées ($\sigma_\chi$ ne dépend pas du config) : l'audit ne touche que la cohérence \emph{topologique}.
+
+\paragraph{Le cœur méson : l'amphichiral $4_1$ --- et pourquoi il ne lève pas tout.} Un méson $=q\bar q=$ matière $+$ antimatière $=$ nœud $+$ son \emph{miroir}. Le nœud qui \emph{est} son propre miroir est un \textbf{amphichiral} ($4_1,6_3,8_3$) --- exactement la propriété des mésons neutres auto-conjugués (états propres de $C$). On trouve ainsi le \textbf{cinquième cœur} : leptons $3_1$, octet $7_2$, décuplet $5_2$, EW $8_3$, \textbf{mésons $4_1$}. Le $4_1$ est réalisable pour \emph{les 17 mésons} du catalogue : le secteur méson, jadis «~sans cœur par définition~», est maintenant unifié comme les autres.
+
+Mais le cœur \emph{ne lève pas} la sous-détermination --- et c'est un \emph{théorème}, pas un échec. À $(J,Q)$ fixés, le partenaire du $4_1$ n'est pas contraint par l'identité du méson : les mêmes nœuds ($6_2,7_4,7_2,\dots$) conviennent pour le $\pi$ comme pour le $\Upsilon$, et les neutres $C$-propres ($\pi^0,\eta,\omega,\phi$) collapsent tous vers $4_1{+}4_1$. La raison est de fond : le cœur capture \emph{toute} la topologie du méson (parité $C$ via l'amphichiralité, spin, charge $Q=\Sigma\chi+\mathrm{Lk}$), et il ne reste à distinguer que la \textbf{saveur} --- qui n'est \emph{pas} un quantum topologique (Règle 0) et vit dans le secteur de masse (Goldstone / constituant), jamais dans le config. \textbf{Trouver le cœur \emph{isole} donc l'irréductible} : la «~résistance~» des mésons n'était pas un manque de cœur mais la signature topologique de l'orthogonalité saveur$\perp$topologie. Le cœur $4_1$ lève la sous-détermination \emph{structurelle} (famille unifiée) ; la liberté résiduelle \emph{est} exactement la saveur, par principe.
+
+\section{Catalogue topologique des nœuds}
+
+Les particules ci-dessus sont des \emph{entrelacs} de nœuds premiers. Le tableau suivant catalogue les nœuds eux-mêmes --- l'\emph{alphabet} --- avec leurs invariants dérivés. Conformément au principe «~$\sigma_\chi$ prévaut~», chaque nœud porte un \textbf{spin}, une \textbf{statistique} et une \textbf{charge} topologiques ; sa \emph{masse} n'est pas une propriété du nœud seul (elle appartient à la catégorie de l'entrelacs).
+
+\paragraph{Règles dérivées.}
+\begin{itemize}\itemsep2pt
+\item \textbf{Spin} : $s(K)=\tfrac12(b(K)-1)$ où $b$ est l'indice de tresse. $b=2\to s=\tfrac12$, $b=3\to s=1$, $b=4\to s=\tfrac32$.
+\item \textbf{Statistique} : fermion $\Longleftrightarrow b$ pair. Pour un nœud torique $T(p,q)$ (forme canonique $p<q$, donc $b=p$), cela équivaut à $(-1)^{(p-1)q}$.
+\item \textbf{Charge} : contribution $\chi$ (reconstruite du système $\Sigma\chi$ des 25 assignations V6 committées) ; la charge de la particule est $Q=\Sigma\chi+\mathrm{Lk}$. Les toriques $T(2,q)$ portent $|\chi|=2$ ; les amphichiraux ($4_1,6_3,8_3$) portent $\chi=0$.
+\item \textbf{Amphichiralité} : nœud auto-miroir ($V_K(t)=V_K(t^{-1})$) $=$ son propre antinœud (matière $=$ antimatière).
+\end{itemize}
+
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}llcccccccl@{}}
+\toprule
+Nœud & $T(p,q)$ & $c$ & $g$ & $b$ & spin & statistique & $\chi$ & amphi. & rôle \\
+\midrule
+\endhead
+$3_{1}$ & $T(2,3)$ & 3 & 1 & 2 & $\tfrac12$ & fermion & $-2$ & --- & c\oe ur LEPTON ($Z_3$) \\
+$4_{1}$ & --- & 4 & 1 & 3 & $1$ & boson & $+0$ & oui & c\oe ur M\'ESON (amphichiral) \\
+$5_{1}$ & $T(2,5)$ & 5 & 2 & 2 & $\tfrac12$ & fermion & $+2$ & --- &  \\
+$5_{2}$ & --- & 5 & 1 & 3 & $1$ & boson & $+3$ & --- & c\oe ur BARYON d\'ecuplet \\
+$6_{1}$ & --- & 6 & 1 & 3 & $1$ & boson & $+1$ & --- &  \\
+$6_{2}$ & --- & 6 & 2 & 3 & $1$ & boson & $-1$ & --- &  \\
+$6_{3}$ & --- & 6 & 2 & 4 & $\tfrac32$ & fermion & $+0$ & oui & amphichiral (DM/m\'eson) \\
+$7_{1}$ & $T(2,7)$ & 7 & 3 & 2 & $\tfrac12$ & fermion & $+2$ & --- &  \\
+$7_{2}$ & --- & 7 & 1 & 3 & $1$ & boson & $+0$ & --- & c\oe ur BARYON octet \\
+$7_{3}$ & --- & 7 & 2 & 4 & $\tfrac32$ & fermion & $+1$ & --- &  \\
+$7_{4}$ & --- & 7 & 1 & 3 & $1$ & boson & $-1$ & --- &  \\
+$7_{5}$ & --- & 7 & 2 & 4 & $\tfrac32$ & fermion & $+1$ & --- &  \\
+$7_{6}$ & --- & 7 & 2 & 4 & $\tfrac32$ & fermion & $+0$ & --- &  \\
+$7_{7}$ & --- & 7 & 2 & 4 & $\tfrac32$ & fermion & ? & --- &  \\
+$8_{1}$ & --- & 8 & 1 & 3 & $1$ & boson & $+0$ & --- &  \\
+$8_{2}$ & --- & 8 & 3 & 3 & $1$ & boson & $+1$ & --- &  \\
+$8_{3}$ & --- & 8 & 2 & 4 & $\tfrac32$ & fermion & $+0$ & oui & c\oe ur \'electrofaible \\
+$9_{1}$ & $T(2,9)$ & 9 & 4 & 2 & $\tfrac12$ & fermion & $+2$ & --- &  \\
+$10_{1}$ & --- & 10 & 1 & 3 & $1$ & boson & ? & --- &  \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\noindent\textbf{Note.} $c$ nombre de croisements, $g$ genre de Seifert. Les «~?~» ($7_7$, $10_1$) sont les $\chi$ non contraints par les assignations committées. Le signe de $\chi$ pour les toriques est chiral (matière $-2$ pour $3_1=e^-$ ; antimatière $+2$) ; $|\chi|=2$ est l'invariant.
+
+\paragraph{Familles toriques $T(p,q)$ et le verrou spin-statistique.}
+Un nœud torique se ferme à partir de la tresse $(\sigma_1\cdots\sigma_{p-1})^q$. Comme $T(p,q)=T(q,p)$, on prend la \emph{forme canonique} $p<q$ (indice de tresse $b=p$ minimal) pour que $(-1)^{(p-1)q}$ coïncide avec la parité de $b$ --- sinon $T(3,4)$ et $T(4,3)$ (le \emph{même} $8_{19}$) donneraient des statistiques opposées. Verdict : $T(2,q)$ fermions (leptons), $T(3,q)$ bosons, $T(4,q)$ fermions.
+
+\begin{center}
+\begin{tabular}{@{}lccccl@{}}
+\toprule
+$T(p,q)$ & $b=p$ & $(p{-}1)q$ & spin & statistique & nœud \\
+\midrule
+$T(2,q)$, $q$ impair & 2 & impair & $\tfrac12$ & \textbf{fermion} & $3_1,5_1,7_1,9_1$ \\
+$T(3,q)$, $3\nmid q$ & 3 & pair & $1$ & \textbf{boson} & $8_{19}{=}T(3,4)$, $10_{124}{=}T(3,5)$ \\
+$T(4,q)$, $q$ impair & 4 & impair & $\tfrac32$ & \textbf{fermion} & $T(4,5),T(4,7),\dots$ (hors catalogue) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Conséquence physique : un $T(3,q)$ \emph{seul} est un \textbf{boson}, donc \textbf{pas} un baryon. Le baryon reste l'entrelacs $3_1+7_2+7_2$ : c'est le $3_1=T(2,3)$ (fermion, $b=2$) qui fournit la statistique fermionique correcte. La piste «~baryon $=T(3,q)$ unique~» est réfutée sur ce verrou.
+
+\paragraph{Où est $\mathcal{S}$ ?}
+Le facteur de masse $\mathcal{S}$ \emph{n'est pas} porté par le nœud isolé --- c'est précisément le contenu de «~$\sigma_\chi$ prévaut~». Le seul cas où un nœud isolé est une particule complète est le $3_1$ leptonique, dont les trois modes $Z_3$ donnent $\mathcal{S}=0{,}001,\ 0{,}252,\ 4{,}246$ ($e,\mu,\tau$, Koide). Partout ailleurs $\mathcal{S}$ est fixé par la \emph{catégorie de l'entrelacs} (Regge baryon, $K\bar K$ méson), pas par le nœud.
+
+\section{Le secteur Goldstone ($\chi$PT / GMOR)}
+
+Les pseudoscalaires $\pi,K,\eta$ ne suivent \emph{pas} $m=\sqrt{\sigma_\chi}\,\mathcal{S}$ : ce sont les \textbf{bosons de Goldstone} de la brisure chirale, dont la masse s'annule dans la limite chirale et croît en $\sqrt{m_q}$ (masse de quark \emph{courant}), pas linéairement. C'est la loi de Gell-Mann--Oakes--Renner :
+\[
+m_{\rm PS}^2=B\,(m_i+m_j),\qquad B=-\langle\bar qq\rangle/f_\pi^2 .
+\]
+$B$ (condensat de $\chi$ sur $f_\pi^2$) et le rapport $m_s/m_l$ se calibrent sur $\pi$ et $K$ ; il reste alors une \emph{prédiction}, le $\eta$, par la relation de Gell-Mann--Okubo pseudoscalaire :
+\[
+3\,m_\eta^2=4\,m_K^2-m_\pi^2\ \Rightarrow\ m_\eta=567~\text{MeV}\quad(\text{exp }548,\ +3{,}4\,\%).
+\]
+Le rapport calibré $m_s/m_l\simeq25$ (masses \emph{courantes}, à ne pas confondre avec le $m_s/m_l=5/3$ \emph{constituant} de l'hyperfin). Splits fins : $\pi^\pm{-}\pi^0=4{,}6$~MeV (EM) et $K^0{-}K^\pm=3{,}9$~MeV ($\Delta\mathrm{Lk}$, $m_d{-}m_u$), la même structure isospin qu'ailleurs.
+
+\paragraph{Le $\eta'$ : anomalie topologique, pas Goldstone.} Le singlet $\eta'$ n'est \emph{pas} un Goldstone : l'anomalie $U(1)_A$ le rend massif même dans la limite chirale. En TQNT c'est \emph{naturel} --- le $\eta'$ couple à la charge topologique (winding / terme de Chern-Simons du champ $\chi$), donc à la topologie elle-même. La masse d'anomalie $m_{\eta'}^2-m_\eta^2\simeq0{,}60\times10^6~\text{MeV}^2$ mesure cette contribution topologique (formule de Witten-Veneziano, $\propto$ susceptibilité topologique). Le $\eta'$ est ainsi le seul pseudoscalaire dont la masse est \emph{topologique}, cohérent avec l'ontologie $\chi$.
+
+\section{Calcul 3-corps de la fonction d'onde (le résidu $\Xi$)}
+
+Le résidu $\Xi$ n'étant pas un $|\psi(0)|^2$ pairwise mais la \emph{compacité} de l'état doublement étrange (\S\,précédent), on le pose comme un vrai problème à trois corps et on \emph{dérive} $|\psi_{ij}(0)|^2$ au lieu de l'ajuster.
+
+\paragraph{Hamiltonien et méthode.} Trois quarks constituants ($m_l,m_s$) dans le confinement linéaire de la corde $\chi$ :
+\[
+H=\sum_i\frac{p_i^2}{2m_i}+\sigma\!\!\sum_{i<j}r_{ij}.
+\]
+En coordonnées de Jacobi $J_1=r_1-r_2$, $J_2=r_3-\tfrac{m_1r_1+m_2r_2}{m_1+m_2}$ (kinétique découplée, masses réduites $\mu_1,\mu_2$), on prend une \textbf{gaussienne corrélée} $\psi=\exp(-\tfrac12 J^{\!\top}\!AJ)$, $A=\bigl(\begin{smallmatrix}a&c\\c&b\end{smallmatrix}\bigr)$ (formalisme A-matrice de Suzuki-Varga). Tout est analytique :
+\[
+\langle T\rangle=\tfrac32\Bigl(\tfrac{a}{2\mu_1}+\tfrac{b}{2\mu_2}\Bigr),\quad
+\langle r_{ij}\rangle=\sqrt{\tfrac{8}{\pi}}\sqrt{w_{ij}^{\!\top}A^{-1}w_{ij}},\quad
+|\psi_{ij}(0)|^2=\bigl(2\pi\,w_{ij}^{\!\top}A^{-1}w_{ij}\bigr)^{-3/2},
+\]
+avec $w_{12}=(1,0)$, $w_{13}=(f_2,-1)$, $w_{23}=(-f_1,-1)$, $f_k=m_k/(m_1{+}m_2)$. On minimise $\langle T\rangle+\langle V\rangle$ sur $(a,b,c)$ pour chaque baryon, puis on forme l'hyperfin $E_{\rm hf}=\kappa\sum_{i<j}\langle\mathbf{S}_i\!\cdot\!\mathbf{S}_j\rangle\,|\psi_{ij}(0)|^2/(m_im_j)$, $\kappa$ calibré sur $N{-}\Delta$. (Script \texttt{simulation/experiments/baryon\_3body\_hyperfine.py}.)
+
+\paragraph{Résultats (m$_s$/m$_l=5/3$).}
+\begin{itemize}\itemsep2pt
+\item \textbf{La compacité est dérivée} et \emph{$\sigma$-indépendante} (pur ratio de masse) : $|\psi_{ss}(0)|^2(\Xi)/|\psi_{ll}(0)|^2(N)=\mathbf{1{,}62}$. Le baryon doublement étrange est bien $\sim$60\,\% plus dense au contact.
+\item \textbf{Le splitting $\Xi^*{-}\Xi$ que le modèle pairwise manquait est corrigé} : $176\to\mathbf{224}$~MeV (exp $214$, $+4{,}7\,\%$). \emph{Le mécanisme du résidu $\Xi$ est confirmé de premier principe.}
+\item \textbf{Mais $\Sigma{-}\Lambda$ se dégrade} : $78\to54$~MeV ($-30\,\%$), car la paire $ls$ se compactifie aussi ($|\psi_{ls}|^2$ monte), gonflant le couplage $ls$.
+\end{itemize}
+
+\paragraph{L'hyperfin de contact ne suffit pas --- deux limites opposées.} La gaussienne constante (\S\,$\tau_\perp$) réussit $\Sigma{-}\Lambda$ ($+0{,}9\,\%$) mais rate $\Xi^*{-}\Xi$ ($176$ vs $214$) ; le contact 3-corps réussit $\Xi^*{-}\Xi$ ($+4{,}7\,\%$) mais rate $\Sigma{-}\Lambda$ ($54$ vs $77$). Le contact $\delta^3$ est trop pointu dans un sens, la densité saturée trop plate dans l'autre.
+
+\paragraph{L'hyperfin étalé réconcilie les deux (portée $=1/\Lambda_\chi$).} On remplace $\delta^3(r_{ij})$ par une densité de portée finie
+\[
+\rho_{ij}=|\psi_{ij}(0)|^2\Bigl[\tfrac{2\lambda^2 s_{ij}^2}{1+2\lambda^2 s_{ij}^2}\Bigr]^{3/2},\quad s_{ij}^2=w_{ij}^{\!\top}A^{-1}w_{ij}.
+\]
+Un étalement $\lambda_{ij}\propto\sqrt{m_im_j}$ (portée $\propto1/$masse) va dans le \emph{mauvais} sens (aggrave les deux). Mais une portée \textbf{fixe} $\lambda_0\simeq\Lambda_\chi$ --- la longueur de corrélation du champ $\chi$ ($1/\Lambda_\chi\approx1$~fm), \emph{sans nouveau paramètre} --- interpole entre les deux limites et amène les \emph{deux} splittings à $\sim$10\,\% :
+\[
+\Sigma{-}\Lambda=70~(-10\,\%),\qquad \Xi^*{-}\Xi=193~(-10\,\%).
+\]
+\textbf{Bilan.} La compacité à 3 corps (origine du résidu $\Xi$) est \emph{dérivée} et $\sigma$-indépendante. L'hyperfin n'est pas un contact $\delta^3$ mais a une portée $\sim1/\Lambda_\chi$ ; avec elle, $\Sigma{-}\Lambda$ et $\Xi^*{-}\Xi$ se tiennent ensemble à $\sim$10\,\% --- mieux que l'un ou l'autre des deux régimes limites, sans paramètre \emph{ajusté} (portée fixée \emph{a posteriori} à $\Lambda_\chi$). Le $<5\,\%$ simultané resterait un cran plus loin (fonction d'onde multi-gaussienne, corrections relativistes), mais le résidu $\Xi$ est désormais \emph{tracé jusqu'à sa cause} : la taille finie de l'hyperfin de la corde $\chi$. La prédiction pairwise du catalogue reste $\Xi\,{+}1{,}6\,\%$.
+
+\section{Passage à l'échelle : test sur 224 particules}
+
+Le tableau principal traite les $\sim$37 états \emph{fondamentaux}. Le vrai test de $\sqrt{\sigma_\chi}$ est le \emph{spectre excité} --- 200+ états du PDG --- car les résonances sont des \textbf{prédictions} (la pente est fixée), pas des calibrations. Recensement par secteur :
+
+\begin{center}\footnotesize
+\begin{tabular}{@{}lr@{\quad}lr@{}}
+\toprule
+secteur & N & secteur & N \\
+\midrule
+leptons chargés & 3 & charmonium ($\eta_c$..$\psi(4415)$) & 12 \\
+$\nu$, jauge/Higgs & 8 & bottomonium ($\eta_b$..$\Upsilon(11020)$) & 16 \\
+$\pi/K/\eta$ Goldstone (+excités) & 22 & mésons charmés $D,D_s$ (+exc.) & 14 \\
+mésons légers $\rho,\omega,\phi,K^*,a,f,b,h$ (+exc.) & 55 & mésons beaux $B,B_s,B_c$ (+exc.) & 12 \\
+baryons légers $N,\Delta,\Lambda,\Sigma,\Xi,\Omega$ (+rés.) & 60 & baryons charmés/beaux & 22 \\
+\midrule
+\multicolumn{4}{r}{\textbf{TOTAL $=224$ particules}}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Test 1 --- l'\emph{universalité} de la pente $\sigma_\chi$.} \textbf{Mise en garde d'honnêteté} : $\sigma_\chi$ est \emph{calibré} sur la pente de Regge (c'est la tension de corde, $\sim$celle de QCD) --- sa \emph{valeur} n'est donc pas prédite. Le contenu testable n'est pas la valeur mais l'\textbf{universalité} : une \emph{seule} pente $2\pi\sigma_\chi=1{,}096$~GeV$^2$ ($m^2$ par unité de $J$) décrit-elle \emph{toutes} les trajectoires ? Sur \textbf{9 trajectoires angulaires} (mésons \emph{et} baryons, 34 états) :
+\begin{center}\footnotesize
+\begin{tabular}{@{}lccc@{}}
+\toprule
+trajectoire & N & pente (GeV$^2$) & pente$/\sigma_\chi$ \\
+\midrule
+$\rho/a$ & 6 & 1.117 & 1.02 \\
+$\omega/f$ & 4 & 1.153 & 1.05 \\
+$K^*$ & 4 & 1.128 & 1.03 \\
+$\phi/f'$ & 3 & 1.199 & 1.09 \\
+$N$ & 4 & 1.066 & 0.97 \\
+$\Delta$ & 4 & 1.180 & 1.08 \\
+$\Lambda$ & 3 & 1.069 & 0.98 \\
+$\Sigma$ & 3 & 1.153 & 1.05 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Toutes à $r^2>0{,}99$, \textbf{pente$/\sigma_\chi=1{,}01\pm0{,}11$}. C'est le contenu réel : \emph{une seule} tension de corde (mésons $=$ baryons, à $\sim$5\,\%) --- et le \emph{même} $\sigma_\chi$ fixe aussi $m_p$ (intercept de Regge) et, via $\Lambda_\chi=\tfrac12\sqrt{\sigma_\chi}$ et Koide, $m_e,m_\mu,m_\tau$ à $0{,}2\,\%$. La \emph{cohérence croisée} d'une unique échelle (hadrons légers, leptons, quarkonia) est la vraie force ; la \emph{valeur} de $\sigma_\chi$, elle, est calibrée.
+
+\paragraph{Test 2 --- trajectoires radiales.} $m^2$ vs $n$ (excitations radiales $\pi,\rho,K,\eta$) : pente$/\sigma_\chi=1{,}38\pm0{,}07$. Le radial est $\sim$40\,\% plus raide que l'angulaire --- distinction QCD connue (la pente radiale $\neq$ orbitale), pas un échec : $\sigma_\chi$ est la pente \emph{orbitale}.
+
+\paragraph{Test 3 --- secteur lourd.} 16 états $c,b$ (mésons $D,D_s,B,B_s,B_c$, quarkonia, baryons $\Lambda_{c,b},\Xi_{c,b},\Omega_{c,b}$) par constituant $\sum m_i$ (4 masses) : RMS $4{,}4\,\%$. Les quarkonia $\eta_b,\Upsilon$ tirent le max ($-11\,\%$, liage de Cornell à ajouter).
+
+\paragraph{Verdict.} Sur 224 particules : la pente angulaire $\sigma_\chi$ est \emph{universelle} (mésons$+$baryons, $\sim$5\,\%) ; le radial est distinct ($+40\,\%$, connu) ; le secteur lourd constituant tient à $4\,\%$ ; les quarkonia relèvent de Cornell --- \emph{avec la même corde $\sigma_\chi$} (ci-dessous). \textbf{L'unique échelle $\sigma_\chi$ survit au passage de 37 à 224 états} --- elle n'était pas ajustée aux fondamentaux, elle est la pente de tout le spectre.
+
+\paragraph{Le liage de Cornell des quarkonia --- avec la corde $\sigma_\chi$.} Les quarkonia $c\bar c,b\bar b$ ne sont pas de simples $2m_Q$ : les quarks lourds, proches, ressentent le terme de Coulomb en plus de la corde. Le potentiel de Cornell
+\[
+V(r)=-\frac{\kappa}{r}+\sigma\,r,\qquad \kappa=\tfrac43\alpha_s,\quad \boxed{\sigma=\sigma_\chi}
+\]
+--- la tension de corde de Cornell \emph{est} $\sigma_\chi$, la \emph{même} corde $\chi$ que la pente de Regge légère. Résolu variationnellement (gaussien, $\mu=m_Q/2$), $\sigma_\chi$ \emph{fixé}, $\alpha_s$ courant ($0{,}35$ charm, $0{,}22$ bottom), $m_c,m_b$ calibrés sur le $1S$ spin-moyenné, et l'hyperfin S-onde calibré sur $J/\psi{-}\eta_c$ :
+\begin{center}\footnotesize
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+état & $2m_Q$ pur & Cornell$+$hf & exp & $\Delta\%$ \\
+\midrule
+$\eta_c$ & 2660 & 2984 & 2984 & $+0.00$ \\
+$J/\psi$ & 2660 & 3097 & 3097 & $+0.00$ \\
+$\eta_b$ & 9262 & 9413 & 9399 & $+0.15$ \\
+$\Upsilon$ & 9262 & 9456 & 9460 & $-0.05$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{RMS $0{,}08\,\%$} (contre $4$--$11\,\%$ en $2m_Q$ pur). Le liage vaut $+409$~MeV (charmonium) et $+183$~MeV (bottomonium), avec des tailles $0{,}37$ et $0{,}22$~fm. \emph{Une seule tension de corde $\sigma_\chi$ pour tout le spectre} : elle donne la pente de Regge des hadrons légers \emph{et} le confinement des quarkonia lourds --- Coulomb en plus pour ces derniers. C'est la cohérence attendue d'une échelle \emph{physique} (la corde $\chi$), pas d'un paramètre par secteur.
+
+\section{La durée de vie : la même ossature que la masse}
+La désintégration se factorise \emph{exactement comme la masse} --- une échelle $\times$ un facteur
+topologique par \emph{classe} :
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+MASSE & $m=\underbrace{\sqrt{\sigma_\chi}}_{\text{échelle}}\times\underbrace{\mathcal{S}_{\rm cat}}_{\text{topo par catégorie (nœud-cœur)}}$ \\[8pt]
+DURÉE DE VIE & $\Gamma=\underbrace{\Gamma_0}_{\text{échelle}}\times\underbrace{\mathcal{G}_{\rm class}}_{\text{géo par classe (cœur de reconnexion)}}\times\underbrace{\rho(Q)}_{\text{habillage cinématique}}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Pour la masse, la classe est le \emph{nœud-cœur} (lepton $3_1$, octet $7_2$, \dots)~; pour le taux,
+c'est le \emph{cœur de reconnexion}, l'entier $\Delta\Lk$ de la transition. Sargent ($\rho(Q)\propto Q^5$)
+n'est que l'\emph{habillage} cinématique ($3$--$5$ décades)~; le facteur \emph{dominant} est
+$\mathcal{G}_{\rm class}$ (12 décades entre fort et faible).
+
+\paragraph{Deux volets.} \emph{Stabilité} $=$ toupie équilibrée~: une particule à $\Lk=\Lk_{\rm opt}$
+(tension d'enlacement nulle) ne se casse pas --- le proton ($\Lk_{\rm opt}{=}3$) et l'électron
+(plancher $3_1$) sont les deux seuls fondamentaux stables. \emph{Facteur de classe}~:
+\[
+\mathcal{G}(\text{FORT},\ \Delta\Lk{=}0)\sim1,\quad
+\mathcal{G}(\text{EM})\sim\alpha,\quad
+\mathcal{G}(\text{FAIBLE},\ \Delta\Lk{=}\pm1)\sim(G_F\Lambda_\chi^2)^2 .
+\]
+
+\paragraph{Le couplage faible $\sim\alpha^3$.} L'amplitude de la reconnexion $\Delta\Lk{=}\pm1$ est
+$G_F\Lambda_\chi^2=c\,\alpha^3$ ($c\approx1{,}31$, $\alpha=1/(k{+}2)$ avec $k{=}135$ identifié \emph{par} $\alpha$, cf.\ réserve infra), d'où l'échelle électrofaible
+\[
+v=(\sqrt2\,G_F)^{-1/2}=\alpha^{-3/2}\Lambda_\chi\,\mathcal{O}(1)=244~\text{GeV}\quad(\text{exp }246),
+\]
+\emph{sans $m_W$}. \textbf{Structural} (mécanisme heuristique)~: la puissance mesurée est
+$p=2{,}945$ ($=3$ à $1{,}8\,\%$), interprétée comme le writhe du trèfle-lepton ($3_1$) via un
+comptage de vertex ($S\simeq3\ln1/\alpha$, un facteur $\alpha$ par croisement) --- \emph{mais}
+sur le \emph{seul} trèfle, writhe $=$ nombre de croisements $=3$ : \textbf{indistinguables}, et la
+règle « croisement $=\alpha$ » n'est pas tirée de l'intégrale de vertex $\chi$. \textbf{Solide}~:
+le propagateur CS $=$ noyau de Gauss donne l'enlacement $\Lk$ en \emph{phase} (résultat connu) ---
+mais c'est la phase, pas la magnitude $\alpha^3$. \textbf{Ouvert}~: le coefficient $c$ ($4/3$ vs
+$5\pi/12$, ce dernier \emph{was SM}~; sans lui $v=\alpha^{-3/2}\Lambda_\chi=335$~GeV, faux de $36\,\%$),
+donc $v$ lui-même est calibré. \emph{Bilan}~: puissance robuste, attribution « writhe » et
+coefficient non établis.
+\emph{Le taux, comme la masse, tient à $\sigma_\chi$ et à la topologie de classe}~; détails dans
+\texttt{brouillon\_stabilite\_durees\_de\_vie.tex} et \texttt{brouillon\_amplitude\_reconnexion\_chi.tex}.
+
+\section{Vérification pré-publication (audit honnête)}
+
+Avant toute diffusion, audit critique en trois volets --- pour \emph{trouver} les faiblesses, pas les masquer.
+
+\paragraph{(A) Nombres et paramètres.} Tous les nombres du tableau se reproduisent (scripts re-exécutés). \textbf{Mais ce n'est PAS «~zéro paramètre~»} : le cadre repose sur $\sigma_\chi$ (échelle, \emph{calibrée} sur la pente de Regge) $+$ $\sim$8--10 constantes :
+\begin{center}\footnotesize
+\begin{tabular}{@{}ll@{}}
+\toprule
+DÉRIVÉ & forme $\mathbb{Z}_3$ de Koide ; Coleman-Glashow ; spin/charge topo \\
+PHYSIQUE/MESURÉ & intercepts de Regge $\alpha_0$ (N, $\Delta$, méson) ; $\alpha_s$ courant \\
+CALIBRÉ & $\tau_\perp$ ($N{-}\Delta$) ; $m_c,m_b$ ; hyperfin lourd ($J/\psi{-}\eta_c$) ; GMOR $B,m_s$ \\
+SUGGESTIF (non forcé) & Koide $\theta{=}2/9$, $M{=}\tfrac32\Lambda_\chi$ ; $E_{Z_3}{=}\tfrac23\Lambda_\chi$ ; $\Delta_s$ \\
+IRRÉDUCTIBLE & $\sigma_\chi$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Ne pas revendiquer «~dérivé sans paramètre~».} Les forces réelles : (i) \emph{universalité} de la pente $\sigma_\chi$ (34 états, mésons$+$baryons) ; (ii) \emph{cohérence croisée} $m_p/m_e/$leptons/quarkonia sur une seule échelle ; (iii) Koide $A=\sqrt2$. Le reste est fit ou calibration.
+
+\paragraph{(B) Durées de vie \& stabilité --- la toupie sous tension.} Image géométrique testée : la particule est une \emph{toupie} (vortex $\chi$, fréquence $\omega\sim m$) métastable ; l'enlacement $\mathrm{Lk}$ stocke une tension élastique qui \emph{déséquilibre} la toupie et abaisse la barrière de reconnexion. \textbf{Ce que cette image établit --- la STABILITÉ} : le proton est une toupie \emph{parfaitement équilibrée} ($\mathrm{Lk}=\mathrm{Lk}_{\rm opt}={+}3$, tension nulle) $\Rightarrow$ stable ; l'électron de même (plancher $3_1$). Les \emph{seuls} fondamentaux stables sont ces deux tops équilibrés (planchers topologiques). \emph{La topologie dit QUI est stable} --- contenu réel. \textbf{Ce qu'elle n'établit PAS --- le TAUX} : on a testé si la géométrie (complexité $c$, spin $J$, tension d'enlacement) prédit $\tau$. Non : à couplage fixé (faibles seuls), $\log\tau$ suit $\log Q$ (Sargent, $r={-}0{,}83$) ; la complexité corrèle à peine ($+0{,}18$) et, après retrait du Sargent, le résidu vs $c$ va dans le \emph{mauvais} sens pour une barrière ($-0{,}52$). La hiérarchie fort ($10^{-24}$s) $<$ EM ($10^{-17}$) $<$ faible est reproduite, mais par l'espace de phase, pas par la tension géométrique. \textbf{$\Rightarrow$ Séparation propre : la topologie fixe la stabilité (toupie équilibrée $=$ plancher) ; la cinématique fixe le taux (phase-space $Q$).} Ne rien publier suggérant une \emph{loi de taux} géométrique --- seule la \emph{stabilité} l'est.
+
+\paragraph{(C) Possibilité d'existence.} Les 34 configs du tableau sont \emph{toutes réalisables} : la \textbf{spin-statistique} est cohérente (fermion $\Leftrightarrow J$ demi-entier $\Leftrightarrow$ nb de composantes $b$-paires impair) pour \emph{toutes}, et la \textbf{charge} $Q=\Sigma\chi+\mathrm{Lk}$ est quantifiée (Lk entier) partout (H, top : $\chi(10_1)$ indéterminé, mais Lk entier quand même). Aucune particule assignée n'est topologiquement interdite. \textbf{Réserve} : la \emph{sous-détermination} des assignations (médiane $\sim$4 configs par état, [[assignment-freedom]]) fait que ces configs ne sont pas \emph{uniques} --- le tableau montre \emph{un} choix cohérent, pas \emph{le} choix.
+
+\paragraph{Position pour publication.} Publiable comme \emph{cadre phénoménologique cohérent à une échelle} ($\sigma_\chi$), avec deux résultats forts (universalité Regge, Koide $A=\sqrt2$) et une honnêteté explicite sur : le comptage de paramètres, la liberté d'assignation, et le fait que masses fines / durées de vie relèvent de physique standard reproduite. \textbf{Ne pas} présenter comme «~dérivation sans paramètre~» ni comme prédiction de durées de vie.
+
+\section{Bilan honnête : ce qui est \emph{vraiment} dérivé (masse $\to$ durée de vie)}
+On classe strictement, du théorème à la coïncidence. \textbf{DÉRIVÉ} (théorème depuis un principe)
+$\neq$ \textbf{CALIBRÉ} $\neq$ \textbf{PHYSIQUE} (constante mesurée) $\neq$ \textbf{SUGGESTIF} (proche,
+non forcé) $\neq$ \textbf{POSTULAT} $\neq$ \textbf{COÏNCIDENCE} (mécanisme réfuté) $\neq$ \textbf{OUVERT}.
+
+\paragraph{Tier 1 --- vraiment dérivé.} La \emph{forme} $\mathbb{Z}_3$ de Koide (3 générations $=$
+3 modes du trèfle) --- \emph{mais} l'amplitude $A=\sqrt2=d_{1/2}(k{=}2)$ est un \textbf{hint} (Koide
+empirique $+$ théorème d'Ising qui se rencontrent en $\sqrt2$~; pont non dérivé, tight-binding non
+prédictif), pas un DÉRIVÉ. \emph{Numérologie (pas dérivé)}~: $\alpha=1/(k{+}2)=1/137$ --- $k{=}135$ identifié \emph{par} $\alpha$ (circulaire, $=$round$(1/\alpha)$), impose EM$=$SU(2)$_k$, et $k$ « unique » contredit le SU(2)$_2$ d'Ising. \emph{Dérivés}~: spin $=\tfrac12(b{-}1)$, statistique, charge
+$Q=\Sigma\chi+\mathrm{Lk}$ (topologiques)~; Coleman-Glashow (isospin, $\mathrm{Lk}$ abélien, sans
+paramètre)~; rapport hyperfin $4/15$ ($\Sigma{-}\Lambda$ vs $N{-}\Delta$). \emph{Structural
+(non DÉRIVÉ)}~: puissance $\alpha^3$ de $G_F$ ($p{=}2{,}945$, « writhe » indistinguable des croisements
+sur le trèfle~; coefficient et $v$ ouverts, $\alpha^{-3/2}\Lambda_\chi=335$~GeV sans lui).
+
+\paragraph{Tier 2 --- fort, mais échelle calibrée.} Universalité de la pente de Regge ($9$
+trajectoires, $34$ états $=$ prédictions, $\sim$5\,\%)~; Cornell des quarkonia avec la \emph{même}
+$\sigma_\chi$ ($0{,}08\,\%$)~; factorisation $m=\sqrt{\sigma_\chi}\,\mathcal{S}$ et
+$\Gamma=\Gamma_0\,\mathcal{G}_{\rm class}\,\rho(Q)$ (couplage $=$ cœur de reconnexion). \emph{Mais
+$\sigma_\chi$ est calibré} (valeur $\approx$ tension de corde QCD).
+
+\paragraph{Tier 3--4 --- calibré / physique / suggestif.} $\sigma_\chi$, $\tau_\perp$, intercepts
+$\alpha_0$ (physiques), $m_c,m_b,\alpha_s$, GMOR, EW. Suggestifs (non forcés)~: $\theta{=}2/9$,
+$M{=}\tfrac32\Lambda_\chi$, $E_{Z_3}$, $D^2{=}4$, coefficient de $G_F$ ($5\pi/12$ était \emph{SM}).
+
+\paragraph{Tier 5 --- postulats.} $CP=$ chiralité $\Leftarrow$ postulat «~$C=$ miroir~» (Règle 0)~;
+assignations (sous-déterminées, médiane $\sim4$/état). Prédiction \emph{falsifiable conditionnelle}
+(amphichiral $\to$ CP-sym, DUNE) --- un \emph{test} du postulat, pas un dérivé.
+
+\paragraph{Tier 6 --- coïncidences (réfutées) et ouvert.} \textbf{Saveur, tout réfuté}~:
+$\delta,\lambda,A$ coïncident, mécanismes cassés par le calcul (\texttt{brouillon\_CKM\_reconnexion}~:
+$\pi/3$ / Ising / mélange SM). \textbf{Durée de vie}~: le \emph{taux} $=$ Sargent standard, pas TQNT
+($\sim2$ décades/particule sans CKM). \textbf{Ouvert}~: coefficient de $G_F$, toute la saveur.
+
+\begin{tcolorbox}[colback=blue!5,colframe=blue!50!black,title=Verdict en une phrase]
+La TQNT dérive une \textbf{ossature} --- une échelle $\sigma_\chi$ $+$ des invariants topologiques
+($d_{1/2}$, writhe, enlacement, Chern-Simons) --- et une \textbf{poignée de théorèmes propres}
+(forme $\mathbb{Z}_3$ de Koide, $\alpha$, Coleman-Glashow~; $A{=}\sqrt2$ et la puissance $\alpha^3$ de $G_F$ = hints structuraux, non dérivés). Les \textbf{valeurs fines}
+(masses relatives, saveur, phases $CP$, durées de vie précises) restent \emph{calibrées, standard,
+ou ouvertes}. La discipline «~exiger la preuve du mécanisme~» a démasqué, une à une, les
+coïncidences qui \emph{paraissaient} des dérivations.
+\end{tcolorbox}
+
+\end{document}

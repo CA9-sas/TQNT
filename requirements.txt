@@ -1,0 +1,8 @@
+numpy>=1.24
+scipy>=1.11
+matplotlib>=3.7
+pytest>=7.4
+sympy>=1.12
+
+# GPU acceleration (optional, requires CUDA 12.x)
+# cupy-cuda12x
