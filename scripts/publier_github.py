@@ -26,7 +26,7 @@ CLE = "~/.ssh/id_github_ca9"
 # ---------------------------------------------------------------- ce qui part
 INCLUSIONS = [
     "theory/**/*.py", "simulation/**/*.py", "tests/**/*.py", "scripts/**/*.py",
-    "requirements.txt", "README.md", "LICENSE", ".gitignore",
+    "requirements.txt", "README.md", "LICENSE",
     # documents de référence : monographie, catalogues, publications de la collection
     "docs/TQNT_detaille_V6_new_FR.pdf", "docs/TQNT_detaille_V6_new_EN.pdf",
     "docs/TQNT_detaillee_V6_FR.pdf", "docs/TQNT_detaillee_V6_EN.pdf",
@@ -150,6 +150,10 @@ def main():
                "PATH": "/usr/bin:/bin", "HOME": str(pathlib.Path.home())}
         msg = a.message or "TQNT — mise à jour du code, des tests et des documents de référence"
         subprocess.run(["git", "add", "-A"], cwd=tmp, check=True)
+        # le .gitignore recopié depuis le dépôt de travail ignore output/ : la liste
+        # d'inclusion fait autorité, on force l'ajout des fichiers retenus.
+        for lot in [locaux[i:i + 200] for i in range(0, len(locaux), 200)]:
+            subprocess.run(["git", "add", "-f", "--"] + lot, cwd=tmp, check=True)
         subprocess.run(["git", "-c", "user.name=CA9 SAS", "-c", "user.email=lilian.cariou@ca9.fr",
                         "commit", "-m", msg], cwd=tmp, check=True)
         subprocess.run(["git", "push", "origin", "main"], cwd=tmp, check=True, env=env)
