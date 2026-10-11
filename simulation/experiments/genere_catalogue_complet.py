@@ -370,7 +370,7 @@ def main():
     r = titre(ws, "Le pool des nœuds premiers (ropelengths ACPR 22/07 ; M_topo = m_ℓ·ℓ/ℓ(3₁) — loi géométrique canonique) "
               "+ ÉTAT LIBRE prédit (§sec:v6-noeuds-libres)")
     header(ws, r, ["Nœud", "c", "ℓ (ACPR)", "M_topo = m libre (MeV)", "Type", "Amphichiral", "u",
-                   "État libre : τ (dénouage P15)", "Rôle canonique V6"])
+                   "État libre : τ (dénouage P15)", "Rôle document principalique V6"])
     data = []
     for K in sorted(ROPELENGTH_ACPR, key=lambda k: (int(k.split("_")[0]), int(k.split("_")[1]))):
         ell = ROPELENGTH_ACPR[K]
@@ -517,7 +517,7 @@ def main():
             "et la charge, la MASSE suit la loi de son SECTEUR. « m V6 » = loi de secteur pour les états "
             "assignés (via le catalogue cœur) ; nœud n=1 non assigné = masse d'ÉTAT LIBRE prédite "
             "(§sec:v6-noeuds-libres) ; entrelacs sombre = estimation ΣM_topo (déclarée). Assignations affichées = "
-            "HISTORIQUES V5 (le canon V6 diffère : n = 3₁+7₂+7̄₂, π = 3₁+3̄₁, μ/τ = modes Z₃ du trèfle — cf. Catalogue "
+            "HISTORIQUES V5 (le document principal V6 diffère : n = 3₁+7₂+7̄₂, π = 3₁+3̄₁, μ/τ = modes Z₃ du trèfle — cf. Catalogue "
             "cœur). « τ V6 » = nombres par classe : assignés → τ PDG (la TQNT dérive la STRUCTURE Fermi/Sargent, "
             "g_topo=1, pas un nombre par état) ; nœud n=1 libre → dénouage P15 τ = u·384π³v⁴ħ/Q⁵ (contrôle muon "
             "−0,4 %) ; DM → barrière CS ; DÉSERT (cascade P15) → volontairement SANS nombres fins (~1e-18 s "

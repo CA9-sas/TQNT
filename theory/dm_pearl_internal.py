@@ -327,9 +327,16 @@ def tov_pearl(M_pearl_Msun: float, m_knot_GeV: float,
         # M = 4pi R^3 rho / 3 et R ~ (K/(G rho^{2/3}))^{1/2}
         # On démarre à l'échelle Chandrasekhar topologique
         m_kg = m_knot_GeV * GEV_KG
-        rho_c_guess = (m_kg / HBAR ** 3) ** 3 * 1e-90 + 1e6  # placeholder
-        # Plus simple : utiliser densité critique relativiste / 100
-        rho_c_guess = 0.01 * m_kg * n_crit_relativistic(m_knot_GeV)
+        # Densité centrale Newtonienne EXACTE du polytrope n=3/2 (Lane-Emden) :
+        #   M = 4π ω a³ ρ_c, a² = 2,5 K ρ_c^(-1/3)/(4πG), ω = 2,71406
+        #   → ρ_c = [M/(4πω)]² (4πG/2,5K)³
+        # (l'ancien guess fixe 0,01·ρ_crit donnait un BRACKET indépendant de la
+        #  cible : toute cible < ~6,4e-3 Msun (m=0,61 GeV) renvoyait l'étoile-
+        #  plancher — bug corrigé 2026-08-04, cf. limites_perles_dm.py)
+        K_eos = HBAR ** 2 * (3.0 * math.pi ** 2) ** (2.0 / 3.0) / (5.0 * m_kg ** (8.0 / 3.0))
+        omega32 = 2.71406
+        rho_c_guess = (M_pearl_Msun * M_SUN_KG / (4.0 * math.pi * omega32)) ** 2 \
+            * (4.0 * math.pi * G_NEWTON / (2.5 * K_eos)) ** 3
 
     def integrate(rho_c: float) -> Dict:
         P_c = eos.P_of_rho(rho_c)

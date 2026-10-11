@@ -1,13 +1,39 @@
+data
 __pycache__/
 *.pyc
+output/
+.pytest_cache/
+.worktrees/
+
+# LaTeX build artifacts
 *.aux
 *.log
 *.out
 *.toc
-*.maf
-*.mtc*
-.pytest_cache/
-# Jamais de données télescope ni d'archives lourdes
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.nav
+*.snm
+*.fot
+*.lof
+*.lot
+texput.log
+
+# Large reference datasets (raw Green Bank telescope data — not source)
+docs/references/AGBT19B_334/
 *.fits
 *.tar
-docs/references/
+
+# minitoc / LaTeX per-chapter ToC artifacts
+*.mtc*
+*.maf
+*.ptc*
+*.mlf*
+docs/references/fermi_lat_gc/*.npy
+docs/references/fermi_lat_gc/*.npz
+docs/references/fermi_lat_gc/pfiles/
+docs/references/fermi_lat_gc/events.txt
+docs/references/fermi_lat_gc/wide/

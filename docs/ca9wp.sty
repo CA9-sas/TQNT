@@ -1,0 +1,106 @@
+% ======================================================================
+%  ca9wp.sty — CA9 Working Papers in Theoretical Physics
+%  Habillage de collection : bandeau de première page + pied de page.
+%
+%  Usage, dans le préambule, APRÈS hyperref :
+%      \usepackage{ca9wp}
+%      \wpnumber{CA9-WP-2026-001-EN}
+%      \wpversion{3.0}
+%      \wpdoi{10.5281/zenodo.20817000}
+%      \wpissn{}                % laisser vide tant que la BnF n'a pas répondu
+%  puis, JUSTE APRÈS \maketitle dans le corps du document :
+%      \wpstyle
+%
+%  Compatible article, report, et le mode twocolumn : le bandeau vit
+%  dans l'en-tête de page, qui occupe toujours toute la largeur du texte.
+%
+%  NB : aucun nom de macro interne ne contient de chiffre — « \ca9@x »
+%  se lirait « \ca » suivi du texte « 9@x », les séquences de contrôle
+%  ne pouvant être formées que de lettres.
+% ======================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ca9wp}[2026/09/11 v1.1 CA9 Working Papers in Theoretical Physics]
+
+\RequirePackage{fancyhdr}
+\RequirePackage{etoolbox}
+\RequirePackage{xcolor}
+
+\definecolor{ca9navy}{RGB}{0,63,95}
+
+% ---- métadonnées de la collection ------------------------------------
+% Titre principal (français) et titre parallèle (anglais, affiché sur les éditions EN).
+\newcommand{\cawp@series}{Cahiers de physique théorique CA9}
+\newcommand{\cawp@seriesalt}{CA9 Working Papers in Theoretical Physics}
+\newcommand{\wpseriesalt}[1]{\renewcommand{\cawp@seriesalt}{#1}}
+% \wpenglish : bandeau de l'édition anglaise — titre français puis titre parallèle.
+\newcommand{\cawp@parallele}{}
+\newcommand{\wpenglish}{\renewcommand{\cawp@parallele}{\\[1pt]\footnotesize\itshape\cawp@seriesalt}}
+\newcommand{\cawp@number}{CA9-WP-\the\year-000}
+\newcommand{\cawp@version}{1.0}
+\newcommand{\cawp@doi}{}
+\newcommand{\cawp@issn}{}
+\newcommand{\wpnumber}[1]{\renewcommand{\cawp@number}{#1}}
+\newcommand{\wpversion}[1]{\renewcommand{\cawp@version}{#1}}
+\newcommand{\wpdoi}[1]{\renewcommand{\cawp@doi}{#1}}
+\newcommand{\wpissn}[1]{\renewcommand{\cawp@issn}{#1}}
+
+% lien seulement si hyperref est chargé
+\newcommand{\cawp@link}[2]{\@ifundefined{href}{#2}{\href{#1}{#2}}}
+
+% \ifx contre \@empty ne suffit pas : \newcommand peut produire un
+% \long\macro, de « meaning » distinct de \@empty. On teste l'EXPANSION.
+\newcommand{\cawp@tmp}{}
+\newcommand{\cawp@ifblank}[3]{%
+  \edef\cawp@tmp{#1}\ifx\cawp@tmp\@empty #2\else #3\fi}
+\newcommand{\cawp@issnbit}{%
+  \cawp@ifblank{\cawp@issn}{}{\ \textperiodcentered\ ISSN \cawp@issn\ (online)}}
+\newcommand{\cawp@doibit}{%
+  \cawp@ifblank{\cawp@doi}{}%
+    {\cawp@link{https://doi.org/\cawp@doi}{doi:\cawp@doi}\ \textperiodcentered\ }}
+
+% ---- styles de page ---------------------------------------------------
+\fancypagestyle{cawpfirst}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0.8pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+  \fancyhead[L]{\color{ca9navy}\footnotesize\sffamily
+    \begin{tabular}{@{}l@{}}%
+      \textbf{\MakeUppercase{\cawp@series}}\cawp@parallele\\[1pt]
+      \cawp@number\ \textperiodcentered\ v\cawp@version\cawp@issnbit
+    \end{tabular}}%
+  \fancyfoot[L]{\color{ca9navy}\scriptsize\sffamily
+    \begin{tabular}{@{}l@{}}%
+      Working paper --- not peer reviewed. Distributed under CC BY 4.0.\\[1pt]
+      \cawp@doibit\cawp@link{https://www.ca9.fr/cahiers/}{ca9.fr/cahiers}
+    \end{tabular}}%
+  \fancyfoot[R]{\color{ca9navy}\scriptsize\sffamily\thepage}%
+}
+
+\fancypagestyle{cawp}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyhead[L]{\color{ca9navy}\scriptsize\sffamily\cawp@series}%
+  \fancyhead[R]{\color{ca9navy}\scriptsize\sffamily\cawp@number}%
+  \fancyfoot[C]{\color{ca9navy}\scriptsize\sffamily\thepage}%
+}
+
+% ---- activation -------------------------------------------------------
+% Le bandeau complet ne doit paraître QU'UNE FOIS, sur la première page
+% composée. Deux chemins selon la classe :
+%   article        -> \wpstyle, appelé après \maketitle, le pose ;
+%   report/book    -> \maketitle fabrique une page de titre (environnement
+%                     titlepage) qui impose \thispagestyle{empty} ; le
+%                     crochet ci-dessous le pose donc AVANT que \wpstyle
+%                     ne s'exécute, et \wpstyle devient sans effet.
+\newif\ifcawp@banner \cawp@bannerfalse
+\newcommand{\cawp@putbanner}{%
+  \ifcawp@banner\else \thispagestyle{cawpfirst}\global\cawp@bannertrue \fi}
+\AtEndEnvironment{titlepage}{\cawp@putbanner}
+\AtBeginDocument{\setlength{\headheight}{24pt}\pagestyle{cawp}}
+\newcommand{\wpstyle}{\cawp@putbanner}
+
+% report/book rétablissent « plain » en tête de chapitre
+\renewcommand{\ps@plain}{\ps@cawp}
+
+\endinput
